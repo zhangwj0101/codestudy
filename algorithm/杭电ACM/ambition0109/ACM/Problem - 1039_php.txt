@@ -1,0 +1,109 @@
+Problem - 1039 
+            Online JudgeOnline ExerciseOnline TeachingOnline ContestsExercise 
+            Author
+            F.A.Q
+            Hand In Hand
+            Online Acmers 
+            Forum | Discuss
+            Statistical Charts
+            Problem Archive
+            Realtime Judge Status
+            Authors Ranklist
+                   C/C++/Java Exams     
+            ACM Steps
+            Code Challenge
+            STD Contests 
+            VIP Contests      
+            Virtual Contests      
+              DIY Contests         xtayalf
+             Mail 0(0)
+             Control Panel 
+             Sign Out
+
+
+      你的报名审核通过了吗？ 
+      “2011阿里巴巴程序设计公开赛”报名截止倒计时: 还有14天~ 
+      若注册列表没有贵校，请发邮件到HDUACM@QQ.COM~ 
+      Easier Done Than Said?
+      Time Limit: 2000/1000 MS (Java/Others)    Memory Limit: 65536/32768 K 
+      (Java/Others)
+      Total Submission(s): 2538    Accepted Submission(s): 1299
+
+
+      Problem Description
+      Password security is a tricky thing. Users prefer simple passwords that 
+      are easy to remember (like buddy), but such passwords are often insecure. 
+      Some sites use random computer-generated passwords (like xvtpzyo), but 
+      users have a hard time remembering them and sometimes leave them written 
+      on notes stuck to their computer. One potential solution is to generate 
+      "pronounceable" passwords that are relatively secure but still easy to 
+      remember.
+
+      FnordCom is developing such a password generator. You work in the quality 
+      control department, and it's your job to test the generator and make sure 
+      that the passwords are acceptable. To be acceptable, a password must 
+      satisfy these three rules:
+
+      It must contain at least one vowel.
+
+      It cannot contain three consecutive vowels or three consecutive 
+consonants.
+
+      It cannot contain two consecutive occurrences of the same letter, except 
+      for 'ee' or 'oo'.
+
+      (For the purposes of this problem, the vowels are 'a', 'e', 'i', 'o', and 
+      'u'; all other letters are consonants.) Note that these rules are not 
+      perfect; there are many common/pronounceable words that are not 
+acceptable.
+
+       
+
+      Input
+      The input consists of one or more potential passwords, one per line, 
+      followed by a line containing only the word 'end' that signals the end of 
+      the file. Each password is at least one and at most twenty letters long 
+      and consists only of lowercase letters.
+
+       
+
+      Output
+      For each password, output whether or not it is acceptable, using the 
+      precise format shown in the example.
+
+       
+
+      Sample Input
+a
+tv
+ptoui
+bontres
+zoggax
+wiinq
+eep
+houctuh
+end 
+
+      Sample Output
+<a> is acceptable.
+<tv> is not acceptable.
+<ptoui> is not acceptable.
+<bontres> is not acceptable.
+<zoggax> is not acceptable.
+<wiinq> is not acceptable.
+<eep> is acceptable.
+<houctuh> is acceptable. 
+
+      Source
+      Mid-Central USA 2000 
+       
+
+
+      Statistic | Submit | Discuss | Note
+
+            Home | TopHangzhou Dianzi University Online Judge 3.0
+            Copyright &copy; 2005-2011 HDU ACM Team. All Rights Reserved.
+            Designer & Developer : Wang Rongtao LinLe GaoJie GanLu
+            Total 0.000355(s) query 1, Server time : 2011-08-03 20:44:55, Gzip 
+            enabled Administration 
+

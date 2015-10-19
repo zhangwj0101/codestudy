@@ -1,0 +1,95 @@
+Problem - 1081 
+            Online JudgeOnline ExerciseOnline TeachingOnline ContestsExercise 
+            Author
+            F.A.Q
+            Hand In Hand
+            Online Acmers 
+            Forum | Discuss
+            Statistical Charts
+            Problem Archive
+            Realtime Judge Status
+            Authors Ranklist
+                   C/C++/Java Exams     
+            ACM Steps
+            Code Challenge
+            STD Contests 
+            VIP Contests      
+            Virtual Contests      
+              DIY Contests         xtayalf
+             Mail 0(0)
+             Control Panel 
+             Sign Out
+
+
+      你的报名审核通过了吗？ 
+      “2011阿里巴巴程序设计公开赛”报名截止倒计时: 还有14天~ 
+      若注册列表没有贵校，请发邮件到HDUACM@QQ.COM~ 
+      To The Max
+      Time Limit: 2000/1000 MS (Java/Others)    Memory Limit: 65536/32768 K 
+      (Java/Others)
+      Total Submission(s): 3367    Accepted Submission(s): 1576
+
+
+      Problem Description
+      Given a two-dimensional array of positive and negative integers, a 
+      sub-rectangle is any contiguous sub-array of size 1 x 1 or greater located 
+      within the whole array. The sum of a rectangle is the sum of all the 
+      elements in that rectangle. In this problem the sub-rectangle with the 
+      largest sum is referred to as the maximal sub-rectangle.
+
+      As an example, the maximal sub-rectangle of the array:
+
+      0 -2 -7 0
+      9 2 -6 2
+      -4 1 -4 1
+      -1 8 0 -2
+
+      is in the lower left corner:
+
+      9 2
+      -4 1
+      -1 8
+
+      and has a sum of 15.
+
+       
+
+      Input
+      The input consists of an N x N array of integers. The input begins with a 
+      single positive integer N on a line by itself, indicating the size of the 
+      square two-dimensional array. This is followed by N 2 integers separated 
+      by whitespace (spaces and newlines). These are the N 2 integers of the 
+      array, presented in row-major order. That is, all numbers in the first 
+      row, left to right, then all numbers in the second row, left to right, 
+      etc. N may be as large as 100. The numbers in the array will be in the 
+      range [-127,127].
+
+       
+
+      Output
+      Output the sum of the maximal sub-rectangle.
+
+       
+
+      Sample Input
+4
+0 -2 -7 0 9 2 -6 2
+-4 1 -4 1 -1
+8 0 -2 
+
+      Sample Output
+15 
+
+      Source
+      Greater New York 2001 
+       
+
+
+      Statistic | Submit | Discuss | Note
+
+            Home | TopHangzhou Dianzi University Online Judge 3.0
+            Copyright &copy; 2005-2011 HDU ACM Team. All Rights Reserved.
+            Designer & Developer : Wang Rongtao LinLe GaoJie GanLu
+            Total 0.000320(s) query 1, Server time : 2011-08-03 20:49:51, Gzip 
+            enabled Administration 
+

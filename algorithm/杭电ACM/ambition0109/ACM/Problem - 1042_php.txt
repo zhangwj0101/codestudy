@@ -1,0 +1,70 @@
+Problem - 1042 
+            Online JudgeOnline ExerciseOnline TeachingOnline ContestsExercise 
+            Author
+            F.A.Q
+            Hand In Hand
+            Online Acmers 
+            Forum | Discuss
+            Statistical Charts
+            Problem Archive
+            Realtime Judge Status
+            Authors Ranklist
+                   C/C++/Java Exams     
+            ACM Steps
+            Code Challenge
+            STD Contests 
+            VIP Contests      
+            Virtual Contests      
+              DIY Contests         xtayalf
+             Mail 0(0)
+             Control Panel 
+             Sign Out
+
+
+      你的报名审核通过了吗？ 
+      “2011阿里巴巴程序设计公开赛”报名截止倒计时: 还有14天~ 
+      若注册列表没有贵校，请发邮件到HDUACM@QQ.COM~ 
+      N!
+      Time Limit: 10000/5000 MS (Java/Others)    Memory Limit: 65536/32768 K 
+      (Java/Others)
+      Total Submission(s): 23428    Accepted Submission(s): 6348
+
+
+      Problem Description
+      Given an integer N(0 ≤ N ≤ 10000), your task is to calculate N!
+
+       
+
+      Input
+      One N in one line, process to the end of file.
+
+       
+
+      Output
+      For each N, output N! in one line.
+
+       
+
+      Sample Input
+1
+2
+3 
+
+      Sample Output
+1
+2
+6 
+
+      Author
+      JGShining（极光炫影）
+       
+
+
+      Statistic | Submit | Discuss | Note
+
+            Home | TopHangzhou Dianzi University Online Judge 3.0
+            Copyright &copy; 2005-2011 HDU ACM Team. All Rights Reserved.
+            Designer & Developer : Wang Rongtao LinLe GaoJie GanLu
+            Total 0.000318(s) query 1, Server time : 2011-08-03 20:45:16, Gzip 
+            enabled Administration 
+

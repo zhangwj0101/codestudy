@@ -1,0 +1,88 @@
+Problem - 1024 
+            Online JudgeOnline ExerciseOnline TeachingOnline ContestsExercise 
+            Author
+            F.A.Q
+            Hand In Hand
+            Online Acmers 
+            Forum | Discuss
+            Statistical Charts
+            Problem Archive
+            Realtime Judge Status
+            Authors Ranklist
+                   C/C++/Java Exams     
+            ACM Steps
+            Code Challenge
+            STD Contests 
+            VIP Contests      
+            Virtual Contests      
+              DIY Contests         xtayalf
+             Mail 0(0)
+             Control Panel 
+             Sign Out
+
+
+      你的报名审核通过了吗？ 
+      “2011阿里巴巴程序设计公开赛”报名截止倒计时: 还有14天~ 
+      若注册列表没有贵校，请发邮件到HDUACM@QQ.COM~ 
+      Max Sum Plus Plus
+      Time Limit: 2000/1000 MS (Java/Others)    Memory Limit: 65536/32768 K 
+      (Java/Others)
+      Total Submission(s): 6721    Accepted Submission(s): 2248
+
+
+      Problem Description
+      Now I think you have got an AC in Ignatius.L's "Max Sum" problem. To be a 
+      brave ACMer, we always challenge ourselves to more difficult problems. Now 
+      you are faced with a more difficult problem.
+
+      Given a consecutive number sequence S1, S2, S3, S4 ... Sx, ... Sn (1 ≤ x ≤ 
+      n ≤ 1,000,000, -32768 ≤ Sx ≤ 32767). We define a function sum(i, j) = Si + 
+      ... + Sj (1 ≤ i ≤ j ≤ n).
+
+      Now given an integer m (m > 0), your task is to find m pairs of i and j 
+      which make sum(i1, j1) + sum(i2, j2) + sum(i3, j3) + ... + sum(im, jm) 
+      maximal (ix ≤ iy ≤ jx or ix ≤ jy ≤ jx is not allowed).
+
+      But I`m lazy, I don't want to write a special-judge module, so you don't 
+      have to output m pairs of i and j, just output the maximal summation of 
+      sum(ix, jx)(1 ≤ x ≤ m) instead. ^_^
+
+       
+
+      Input
+      Each test case will begin with two integers m and n, followed by n 
+      integers S1, S2, S3 ... Sn.
+      Process to the end of file.
+
+       
+
+      Output
+      Output the maximal summation described above in one line.
+
+       
+
+      Sample Input
+1 3 1 2 3
+2 6 -1 4 -2 3 -2 3 
+
+      Sample Output
+6
+8
+
+Hint
+Huge input, scanf and dynamic programming is recommended.
+  
+
+      Author
+      JGShining（极光炫影）
+       
+
+
+      Statistic | Submit | Discuss | Note
+
+            Home | TopHangzhou Dianzi University Online Judge 3.0
+            Copyright &copy; 2005-2011 HDU ACM Team. All Rights Reserved.
+            Designer & Developer : Wang Rongtao LinLe GaoJie GanLu
+            Total 0.000440(s) query 1, Server time : 2011-08-03 20:41:48, Gzip 
+            enabled Administration 
+

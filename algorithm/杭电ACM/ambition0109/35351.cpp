@@ -1,0 +1,124 @@
+////////////////////System Comment////////////////////
+////Welcome to Hangzhou Dianzi University Online Judge
+////http://acm.hdu.edu.cn
+//////////////////////////////////////////////////////
+////Username: ambition0109
+////Nickname: Ambition
+////Run ID: 
+////Submit time: 2010-09-23 14:33:50
+////Compiler: GUN C++
+//////////////////////////////////////////////////////
+////Problem ID: 3535
+////Problem Title: 
+////Run result: Accept
+////Run time:109MS
+////Run memory:444KB
+//////////////////System Comment End//////////////////
+/*
+ * 3535.cpp
+ *
+ *  Created on: 2010-9-23
+ *      Author: administrator
+ */
+
+#include<cstdio>
+#include<cstring>
+#include<vector>
+#include<algorithm>
+using namespace std;
+
+struct Items{
+	int cost,val;
+};
+bool cmpr(const Items& a,const Items& b){
+	return a.cost>b.cost;
+}
+struct Kind{
+	int n,t;
+	vector<Items> items;
+	void Sort(){
+		sort(items.begin(),items.begin()+n,cmpr);
+	}
+}kind[110];
+
+bool cmp(const Kind& a,const Kind& b){
+	return a.t>b.t;
+}
+
+int Max(int a, int b){
+	int dif=b-a;
+	return b-(dif&(dif>>31));
+}
+
+int bag[110][110];
+int main()
+{
+	int n,t;
+	while(scanf("%d%d",&n,&t)!=EOF){
+		for(int i=1;i<=n;i++){
+			scanf("%d%d",&kind[i].n,&kind[i].t);
+			kind[i].items.clear();
+//			kind[i].items.resize(n+2);
+			for(int j=0;j<kind[i].n;j++){
+				Items tmp;
+				scanf("%d%d",&tmp.cost,&tmp.val);
+				kind[i].items.push_back(tmp);
+			}
+			kind[i].Sort();
+		}
+		memset(bag,-1,sizeof(bag));
+		sort(kind+1,kind+n+1,cmp);
+		bag[0][0]=0;
+		for(int i=1;i<=n;i++){
+			if(kind[i].t==0){
+				for(int j=0;j<kind[i].n;j++){
+					for(int k=t;k>=kind[i].items[j].cost;k--){
+						if(bag[i][k-kind[i].items[j].cost]!=-1){
+							bag[i][k]=Max(bag[i][k],
+									bag[i][k-kind[i].items[j].cost]+kind[i].items[j].val);
+						}
+						if(bag[i-1][k-kind[i].items[j].cost]!=-1){
+							bag[i][k]=Max(bag[i][k],
+									bag[i-1][k-kind[i].items[j].cost]+kind[i].items[j].val);
+						}
+					}
+				}
+			}else if(kind[i].t==1){
+				for(int j=0;j<kind[i].n;j++){
+					for(int k=t;k>=0;k--){
+						if(k>=kind[i].items[j].cost){
+							if(bag[i-1][k-kind[i].items[j].cost]!=-1){
+								bag[i][k]=Max(bag[i][k],
+										bag[i-1][k-kind[i].items[j].cost]+kind[i].items[j].val);
+							}
+						}
+						bag[i][k]=Max(bag[i][k],bag[i-1][k]);
+					}
+				}
+			}else if(kind[i].t==2){
+				for(int j=0;j<kind[i].n;j++){
+					for(int k=t;k>=0;k--){
+						if(k>=kind[i].items[j].cost){
+							if(bag[i][k-kind[i].items[j].cost]!=-1){
+								bag[i][k]=Max(bag[i][k],
+									bag[i][k-kind[i].items[j].cost]+kind[i].items[j].val);
+							}
+							if(bag[i-1][k-kind[i].items[j].cost]!=-1){
+								bag[i][k]=Max(bag[i][k],
+										bag[i-1][k-kind[i].items[j].cost]+kind[i].items[j].val);
+							}
+						}
+						bag[i][k]=Max(bag[i][k],bag[i-1][k]);
+					}
+				}
+			}
+		}
+		int max=-1;
+		for(int i=0;i<=t;i++){
+			if(bag[n][i]>max){
+				max=bag[n][i];
+			}
+		}
+		printf("%d\n",max);
+	}
+}

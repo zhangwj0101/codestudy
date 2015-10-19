@@ -1,0 +1,49 @@
+////////////////////System Comment////////////////////
+////Welcome to Hangzhou Dianzi University Online Judge
+////http://acm.hdu.edu.cn
+//////////////////////////////////////////////////////
+////Username: ambition0109
+////Nickname: Ambition
+////Run ID: 
+////Submit time: 2010-07-17 16:42:09
+////Compiler: Visual C++
+//////////////////////////////////////////////////////
+////Problem ID: 3456
+////Problem Title: 
+////Run result: Accept
+////Run time:0MS
+////Run memory:224KB
+//////////////////System Comment End//////////////////
+#include<cstdio>
+#include<cstdlib>
+#include<sstream>
+#include<cmath>
+#include<iostream>
+#include<vector>
+#include<string>
+#include<set>
+#include<algorithm>
+using namespace std;
+
+int main()
+{
+	string str;
+	while(getline(cin,str))
+	{
+		stringstream ss(str);
+		string temp;
+		while(ss>>temp)
+		{
+			if(temp.find("What")!=-1){
+				string ans="Forty-two";
+				while(ss>>temp){
+					if(temp.find(".")!=-1) break;
+					else if(temp.find('?')!=-1){
+						ans+=" "+temp;ans[ans.length()-1]='.';
+						cout<<ans<<endl; break;
+					}else ans+=" "+temp;
+				}
+			}else continue;
+		}
+	}
+}

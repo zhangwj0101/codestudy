@@ -1,0 +1,102 @@
+Problem - 1074 
+            Online JudgeOnline ExerciseOnline TeachingOnline ContestsExercise 
+            Author
+            F.A.Q
+            Hand In Hand
+            Online Acmers 
+            Forum | Discuss
+            Statistical Charts
+            Problem Archive
+            Realtime Judge Status
+            Authors Ranklist
+                   C/C++/Java Exams     
+            ACM Steps
+            Code Challenge
+            STD Contests 
+            VIP Contests      
+            Virtual Contests      
+              DIY Contests         xtayalf
+             Mail 0(0)
+             Control Panel 
+             Sign Out
+
+
+      你的报名审核通过了吗？ 
+      “2011阿里巴巴程序设计公开赛”报名截止倒计时: 还有14天~ 
+      若注册列表没有贵校，请发邮件到HDUACM@QQ.COM~ 
+      Doing Homework
+      Time Limit: 2000/1000 MS (Java/Others)    Memory Limit: 65536/32768 K 
+      (Java/Others)
+      Total Submission(s): 1944    Accepted Submission(s): 681
+
+
+      Problem Description
+      Ignatius has just come back school from the 30th ACM/ICPC. Now he has a 
+      lot of homework to do. Every teacher gives him a deadline of handing in 
+      the homework. If Ignatius hands in the homework after the deadline, the 
+      teacher will reduce his score of the final test, 1 day for 1 point. And as 
+      you know, doing homework always takes a long time. So Ignatius wants you 
+      to help him to arrange the order of doing homework to minimize the reduced 
+      score.
+       
+
+      Input
+      The input contains several test cases. The first line of the input is a 
+      single integer T which is the number of test cases. T test cases follow.
+      Each test case start with a positive integer N(1<=N<=15) which indicate 
+      the number of homework. Then N lines follow. Each line contains a string 
+      S(the subject's name, each string will at most has 100 characters) and two 
+      integers D(the deadline of the subject), C(how many days will it take 
+      Ignatius to finish this subject's homework). 
+
+      Note: All the subject names are given in the alphabet increasing order. So 
+      you may process the problem much easier.
+
+       
+
+      Output
+      For each test case, you should output the smallest total reduced score, 
+      then give out the order of the subjects, one subject in a line. If there 
+      are more than one orders, you should output the alphabet smallest one.
+
+       
+
+      Sample Input
+2
+3
+Computer 3 3
+English 20 1
+Math 3 2
+3
+Computer 3 3
+English 6 3
+Math 6 3 
+
+      Sample Output
+2
+Computer
+Math
+English
+3
+Computer
+English
+Math
+
+Hint
+In the second test case, both Computer->English->Math and Computer->Math->English leads to reduce 3 points, but the 
+word "English" appears earlier than the word "Math", so we choose the first order. That is so-called alphabet order.
+  
+
+      Author
+      Ignatius.L
+       
+
+
+      Statistic | Submit | Discuss | Note
+
+            Home | TopHangzhou Dianzi University Online Judge 3.0
+            Copyright &copy; 2005-2011 HDU ACM Team. All Rights Reserved.
+            Designer & Developer : Wang Rongtao LinLe GaoJie GanLu
+            Total 0.000350(s) query 1, Server time : 2011-08-03 20:49:12, Gzip 
+            enabled Administration 
+

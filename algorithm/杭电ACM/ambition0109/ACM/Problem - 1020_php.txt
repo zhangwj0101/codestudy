@@ -1,0 +1,81 @@
+Problem - 1020 
+            Online JudgeOnline ExerciseOnline TeachingOnline ContestsExercise 
+            Author
+            F.A.Q
+            Hand In Hand
+            Online Acmers 
+            Forum | Discuss
+            Statistical Charts
+            Problem Archive
+            Realtime Judge Status
+            Authors Ranklist
+                   C/C++/Java Exams     
+            ACM Steps
+            Code Challenge
+            STD Contests 
+            VIP Contests      
+            Virtual Contests      
+              DIY Contests         xtayalf
+             Mail 0(0)
+             Control Panel 
+             Sign Out
+
+
+      你的报名审核通过了吗？ 
+      “2011阿里巴巴程序设计公开赛”报名截止倒计时: 还有14天~ 
+      若注册列表没有贵校，请发邮件到HDUACM@QQ.COM~ 
+      Encoding
+      Time Limit: 2000/1000 MS (Java/Others)    Memory Limit: 65536/32768 K 
+      (Java/Others)
+      Total Submission(s): 11267    Accepted Submission(s): 4712
+
+
+      Problem Description
+      Given a string containing only 'A' - 'Z', we could encode it using the 
+      following method: 
+
+      1. Each sub-string containing k same characters should be encoded to "kX" 
+      where "X" is the only character in this sub-string.
+
+      2. If the length of the sub-string is 1, '1' should be ignored.
+
+       
+
+      Input
+      The first line contains an integer N (1 <= N <= 100) which indicates the 
+      number of test cases. The next N lines contain N strings. Each string 
+      consists of only 'A' - 'Z' and the length is less than 10000.
+
+       
+
+      Output
+      For each test case, output the encoded string in a line.
+
+       
+
+      Sample Input
+2
+ABC
+ABBCCC 
+
+      Sample Output
+ABC
+A2B3C 
+
+      Author
+      ZHANG Zheng
+       
+
+      Recommend
+      JGShining
+       
+
+
+      Statistic | Submit | Discuss | Note
+
+            Home | TopHangzhou Dianzi University Online Judge 3.0
+            Copyright &copy; 2005-2011 HDU ACM Team. All Rights Reserved.
+            Designer & Developer : Wang Rongtao LinLe GaoJie GanLu
+            Total 0.000373(s) query 1, Server time : 2011-08-03 20:41:16, Gzip 
+            enabled Administration 
+

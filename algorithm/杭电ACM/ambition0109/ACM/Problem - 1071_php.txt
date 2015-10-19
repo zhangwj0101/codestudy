@@ -1,0 +1,91 @@
+Problem - 1071 
+            Online JudgeOnline ExerciseOnline TeachingOnline ContestsExercise 
+            Author
+            F.A.Q
+            Hand In Hand
+            Online Acmers 
+            Forum | Discuss
+            Statistical Charts
+            Problem Archive
+            Realtime Judge Status
+            Authors Ranklist
+                   C/C++/Java Exams     
+            ACM Steps
+            Code Challenge
+            STD Contests 
+            VIP Contests      
+            Virtual Contests      
+              DIY Contests         xtayalf
+             Mail 0(0)
+             Control Panel 
+             Sign Out
+
+
+      你的报名审核通过了吗？ 
+      “2011阿里巴巴程序设计公开赛”报名截止倒计时: 还有14天~ 
+      若注册列表没有贵校，请发邮件到HDUACM@QQ.COM~ 
+      The area
+      Time Limit: 2000/1000 MS (Java/Others)    Memory Limit: 65536/32768 K 
+      (Java/Others)
+      Total Submission(s): 3507    Accepted Submission(s): 2378
+
+
+      Problem Description
+      Ignatius bought a land last week, but he didn't know the area of the land 
+      because the land is enclosed by a parabola and a straight line. The 
+      picture below shows the area. Now given all the intersectant points shows 
+      in the picture, can you tell Ignatius the area of the land?
+
+      Note: The point P1 in the picture is the vertex of the parabola.
+
+
+
+
+
+       
+
+      Input
+      The input contains several test cases. The first line of the input is a 
+      single integer T which is the number of test cases. T test cases follow.
+      Each test case contains three intersectant points which shows in the 
+      picture, they are given in the order of P1, P2, P3. Each point is 
+      described by two floating-point numbers X and Y(0.0<=X,Y<=1000.0).
+
+       
+
+      Output
+      For each test case, you should output the area of the land, the result 
+      should be rounded to 2 decimal places.
+
+       
+
+      Sample Input
+2
+5.000000 5.000000
+0.000000 0.000000
+10.000000 0.000000
+10.000000 10.000000
+1.000000 1.000000
+14.000000 8.222222 
+
+      Sample Output
+33.33
+40.69
+
+Hint
+For float may be not accurate enough, please use double instead of float.
+  
+
+      Author
+      Ignatius.L
+       
+
+
+      Statistic | Submit | Discuss | Note
+
+            Home | TopHangzhou Dianzi University Online Judge 3.0
+            Copyright &copy; 2005-2011 HDU ACM Team. All Rights Reserved.
+            Designer & Developer : Wang Rongtao LinLe GaoJie GanLu
+            Total 0.000329(s) query 1, Server time : 2011-08-03 20:48:25, Gzip 
+            enabled Administration 
+

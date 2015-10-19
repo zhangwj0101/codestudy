@@ -1,0 +1,76 @@
+Problem - 1060 
+            Online JudgeOnline ExerciseOnline TeachingOnline ContestsExercise 
+            Author
+            F.A.Q
+            Hand In Hand
+            Online Acmers 
+            Forum | Discuss
+            Statistical Charts
+            Problem Archive
+            Realtime Judge Status
+            Authors Ranklist
+                   C/C++/Java Exams     
+            ACM Steps
+            Code Challenge
+            STD Contests 
+            VIP Contests      
+            Virtual Contests      
+              DIY Contests         xtayalf
+             Mail 0(0)
+             Control Panel 
+             Sign Out
+
+
+      你的报名审核通过了吗？ 
+      “2011阿里巴巴程序设计公开赛”报名截止倒计时: 还有14天~ 
+      若注册列表没有贵校，请发邮件到HDUACM@QQ.COM~ 
+      Leftmost Digit
+      Time Limit: 2000/1000 MS (Java/Others)    Memory Limit: 65536/32768 K 
+      (Java/Others)
+      Total Submission(s): 5588    Accepted Submission(s): 2125
+
+
+      Problem Description
+      Given a positive integer N, you should output the leftmost digit of N^N.
+
+       
+
+      Input
+      The input contains several test cases. The first line of the input is a 
+      single integer T which is the number of test cases. T test cases follow.
+      Each test case contains a single positive integer N(1<=N<=1,000,000,000).
+
+       
+
+      Output
+      For each test case, you should output the leftmost digit of N^N.
+
+       
+
+      Sample Input
+2
+3
+4 
+
+      Sample Output
+2
+2
+
+Hint
+In the first case, 3 * 3 * 3 = 27, so the leftmost digit is 2.
+In the second case, 4 * 4 * 4 * 4 = 256, so the leftmost digit is 2.
+  
+
+      Author
+      Ignatius.L
+       
+
+
+      Statistic | Submit | Discuss | Note
+
+            Home | TopHangzhou Dianzi University Online Judge 3.0
+            Copyright &copy; 2005-2011 HDU ACM Team. All Rights Reserved.
+            Designer & Developer : Wang Rongtao LinLe GaoJie GanLu
+            Total 0.000614(s) query 1, Server time : 2011-08-03 20:47:14, Gzip 
+            enabled Administration 
+

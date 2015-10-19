@@ -1,0 +1,95 @@
+Problem - 1037 
+            Online JudgeOnline ExerciseOnline TeachingOnline ContestsExercise 
+            Author
+            F.A.Q
+            Hand In Hand
+            Online Acmers 
+            Forum | Discuss
+            Statistical Charts
+            Problem Archive
+            Realtime Judge Status
+            Authors Ranklist
+                   C/C++/Java Exams     
+            ACM Steps
+            Code Challenge
+            STD Contests 
+            VIP Contests      
+            Virtual Contests      
+              DIY Contests         xtayalf
+             Mail 0(0)
+             Control Panel 
+             Sign Out
+
+
+      你的报名审核通过了吗？ 
+      “2011阿里巴巴程序设计公开赛”报名截止倒计时: 还有14天~ 
+      若注册列表没有贵校，请发邮件到HDUACM@QQ.COM~ 
+      Keep on Truckin'
+      Time Limit: 2000/1000 MS (Java/Others)    Memory Limit: 65536/32768 K 
+      (Java/Others)
+      Total Submission(s): 3459    Accepted Submission(s): 2386
+
+
+      Problem Description
+      Boudreaux and Thibodeaux are on the road again . . .
+
+      "Boudreaux, we have to get this shipment of mudbugs to Baton Rouge by 
+      tonight!"
+
+      "Don't worry, Thibodeaux, I already checked ahead. There are three 
+      underpasses and our 18-wheeler will fit through all of them, so just keep 
+      that motor running!"
+
+      "We're not going to make it, I say!"
+
+      So, which is it: will there be a very messy accident on Interstate 10, or 
+      is Thibodeaux just letting the sound of his own wheels drive him crazy?
+
+       
+
+      Input
+      Input to this problem will consist of a single data set. The data set will 
+      be formatted according to the following description.
+
+      The data set will consist of a single line containing 3 numbers, separated 
+      by single spaces. Each number represents the height of a single underpass 
+      in inches. Each number will be between 0 and 300 inclusive.
+
+       
+
+      Output
+      There will be exactly one line of output. This line will be:
+
+         NO CRASH
+
+      if the height of the 18-wheeler is less than the height of each of the 
+      underpasses, or:
+
+         CRASH X
+
+      otherwise, where X is the height of the first underpass in the data set 
+      that the 18-wheeler is unable to go under (which means its height is less 
+      than or equal to the height of the 18-wheeler). 
+      The height of the 18-wheeler is 168 inches.
+
+       
+
+      Sample Input
+180 160 170 
+
+      Sample Output
+CRASH 160 
+
+      Source
+      South Central USA 2003 
+       
+
+
+      Statistic | Submit | Discuss | Note
+
+            Home | TopHangzhou Dianzi University Online Judge 3.0
+            Copyright &copy; 2005-2011 HDU ACM Team. All Rights Reserved.
+            Designer & Developer : Wang Rongtao LinLe GaoJie GanLu
+            Total 0.000344(s) query 1, Server time : 2011-08-03 20:44:43, Gzip 
+            enabled Administration 
+

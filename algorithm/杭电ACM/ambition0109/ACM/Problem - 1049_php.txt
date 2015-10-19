@@ -1,0 +1,79 @@
+Problem - 1049 
+            Online JudgeOnline ExerciseOnline TeachingOnline ContestsExercise 
+            Author
+            F.A.Q
+            Hand In Hand
+            Online Acmers 
+            Forum | Discuss
+            Statistical Charts
+            Problem Archive
+            Realtime Judge Status
+            Authors Ranklist
+                   C/C++/Java Exams     
+            ACM Steps
+            Code Challenge
+            STD Contests 
+            VIP Contests      
+            Virtual Contests      
+              DIY Contests         xtayalf
+             Mail 0(0)
+             Control Panel 
+             Sign Out
+
+
+      你的报名审核通过了吗？ 
+      “2011阿里巴巴程序设计公开赛”报名截止倒计时: 还有14天~ 
+      若注册列表没有贵校，请发邮件到HDUACM@QQ.COM~ 
+      Climbing Worm
+      Time Limit: 2000/1000 MS (Java/Others)    Memory Limit: 65536/32768 K 
+      (Java/Others)
+      Total Submission(s): 5535    Accepted Submission(s): 3394
+
+
+      Problem Description
+      An inch worm is at the bottom of a well n inches deep. It has enough 
+      energy to climb u inches every minute, but then has to rest a minute 
+      before climbing again. During the rest, it slips down d inches. The 
+      process of climbing and resting then repeats. How long before the worm 
+      climbs out of the well? We'll always count a portion of a minute as a 
+      whole minute and if the worm just reaches the top of the well at the end 
+      of its climbing, we'll assume the worm makes it out.
+
+       
+
+      Input
+      There will be multiple problem instances. Each line will contain 3 
+      positive integers n, u and d. These give the values mentioned in the 
+      paragraph above. Furthermore, you may assume d < u and n < 100. A value of 
+      n = 0 indicates end of output.
+
+       
+
+      Output
+      Each input instance should generate a single integer on a line, indicating 
+      the number of minutes it takes for the worm to climb out of the well.
+
+       
+
+      Sample Input
+10 2 1
+20 3 1
+0 0 0 
+
+      Sample Output
+17
+19 
+
+      Source
+      East Central North America 2002 
+       
+
+
+      Statistic | Submit | Discuss | Note
+
+            Home | TopHangzhou Dianzi University Online Judge 3.0
+            Copyright &copy; 2005-2011 HDU ACM Team. All Rights Reserved.
+            Designer & Developer : Wang Rongtao LinLe GaoJie GanLu
+            Total 0.000405(s) query 1, Server time : 2011-08-03 20:45:51, Gzip 
+            enabled Administration 
+

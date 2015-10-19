@@ -1,0 +1,82 @@
+Problem - 1030 
+            Online JudgeOnline ExerciseOnline TeachingOnline ContestsExercise 
+            Author
+            F.A.Q
+            Hand In Hand
+            Online Acmers 
+            Forum | Discuss
+            Statistical Charts
+            Problem Archive
+            Realtime Judge Status
+            Authors Ranklist
+                   C/C++/Java Exams     
+            ACM Steps
+            Code Challenge
+            STD Contests 
+            VIP Contests      
+            Virtual Contests      
+              DIY Contests         xtayalf
+             Mail 0(0)
+             Control Panel 
+             Sign Out
+
+
+      你的报名审核通过了吗？ 
+      “2011阿里巴巴程序设计公开赛”报名截止倒计时: 还有14天~ 
+      若注册列表没有贵校，请发邮件到HDUACM@QQ.COM~ 
+      Delta-wave 
+      Time Limit: 2000/1000 MS (Java/Others)    Memory Limit: 65536/32768 K 
+      (Java/Others)
+      Total Submission(s): 2606    Accepted Submission(s): 975
+
+
+      Problem Description
+      A triangle field is numbered with successive integers in the way shown on 
+      the picture below. 
+
+
+
+
+
+      The traveller needs to go from the cell with number M to the cell with 
+      number N. The traveller is able to enter the cell through cell edges only, 
+      he can not travel from cell to cell through vertices. The number of edges 
+      the traveller passes makes the length of the traveller's route. 
+
+      Write the program to determine the length of the shortest route connecting 
+      cells with numbers N and M. 
+
+       
+
+      Input
+      Input contains two integer numbers M and N in the range from 1 to 
+      1000000000 separated with space(s).
+       
+
+      Output
+      Output should contain the length of the shortest route.
+       
+
+      Sample Input
+6 12  
+
+      Sample Output
+3 
+
+      Source
+      Ural Collegiate Programming Contest 1998 
+       
+
+      Recommend
+      lcy
+       
+
+
+      Statistic | Submit | Discuss | Note
+
+            Home | TopHangzhou Dianzi University Online Judge 3.0
+            Copyright &copy; 2005-2011 HDU ACM Team. All Rights Reserved.
+            Designer & Developer : Wang Rongtao LinLe GaoJie GanLu
+            Total 0.000370(s) query 1, Server time : 2011-08-03 20:43:01, Gzip 
+            enabled Administration 
+

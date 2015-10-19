@@ -1,0 +1,80 @@
+Problem - 1062 
+            Online JudgeOnline ExerciseOnline TeachingOnline ContestsExercise 
+            Author
+            F.A.Q
+            Hand In Hand
+            Online Acmers 
+            Forum | Discuss
+            Statistical Charts
+            Problem Archive
+            Realtime Judge Status
+            Authors Ranklist
+                   C/C++/Java Exams     
+            ACM Steps
+            Code Challenge
+            STD Contests 
+            VIP Contests      
+            Virtual Contests      
+              DIY Contests         xtayalf
+             Mail 0(0)
+             Control Panel 
+             Sign Out
+
+
+      你的报名审核通过了吗？ 
+      “2011阿里巴巴程序设计公开赛”报名截止倒计时: 还有14天~ 
+      若注册列表没有贵校，请发邮件到HDUACM@QQ.COM~ 
+      Text Reverse
+      Time Limit: 2000/1000 MS (Java/Others)    Memory Limit: 65536/32768 K 
+      (Java/Others)
+      Total Submission(s): 6091    Accepted Submission(s): 2296
+
+
+      Problem Description
+      Ignatius likes to write words in reverse way. Given a single line of text 
+      which is written by Ignatius, you should reverse all the words and then 
+      output them.
+
+       
+
+      Input
+      The input contains several test cases. The first line of the input is a 
+      single integer T which is the number of test cases. T test cases follow.
+      Each test case contains a single line with several words. There will be at 
+      most 1000 characters in a line.
+
+       
+
+      Output
+      For each test case, you should output the text which is processed.
+
+       
+
+      Sample Input
+3
+olleh !dlrow
+m'I morf .udh
+I ekil .mca 
+
+      Sample Output
+hello world!
+I'm from hdu.
+I like acm.
+
+Hint
+Remember to use getchar() to read '\n' after the interger T, then you may use gets() to read a line and process it.
+  
+
+      Author
+      Ignatius.L
+       
+
+
+      Statistic | Submit | Discuss | Note
+
+            Home | TopHangzhou Dianzi University Online Judge 3.0
+            Copyright &copy; 2005-2011 HDU ACM Team. All Rights Reserved.
+            Designer & Developer : Wang Rongtao LinLe GaoJie GanLu
+            Total 0.000322(s) query 1, Server time : 2011-08-03 20:47:32, Gzip 
+            enabled Administration 
+
