@@ -17,14 +17,6 @@ public class LongestSubstringWithoutRepeatingCharacters_3 {
 
 //        System.out.println(lengthOfLongestSubstring("abbbb"));
 //        System.out.println(findLongestDifLength("abbbb"));
-        BigDecimal unpaidAmount = new BigDecimal(505);
-        BigDecimal dealAmount = new BigDecimal(490);
-        //真实收益率 ＝ (剩余本息－实际投标金额)*365/(实际投标金额*可获得的收益天数)
-        BigDecimal actualRate = unpaidAmount.subtract(dealAmount)
-                .multiply(new BigDecimal(365))
-                .divide(dealAmount.multiply(new BigDecimal(31)), 4, BigDecimal.ROUND_HALF_UP);
-        System.out.println(actualRate);
-
     }
 
     public static int findLongestDifLength(String s) {
