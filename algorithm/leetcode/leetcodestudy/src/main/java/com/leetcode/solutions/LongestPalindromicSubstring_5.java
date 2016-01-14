@@ -12,8 +12,8 @@ package com.leetcode.solutions;
 public class LongestPalindromicSubstring_5 {
 
     public static void main(String[] args) {
-        String s = "sdfs";
-        System.out.println(longestPalindrome(s));
+        String s = "sddss";
+        System.out.println(longestPalindrome1(s));
     }
 
     /**
@@ -49,5 +49,28 @@ public class LongestPalindromicSubstring_5 {
         }
         // 最长为mmax - 1  
         return s.substring(right / 2 - mmax / 2, right / 2 - mmax / 2 + mmax - 1);
+    }
+
+    /**
+     * o(n)
+     *
+     * @param s
+     * @return
+     */
+    public static String longestPalindrome1(String s) {
+        int[][] f = new int[s.length()][s.length()];
+        int start = 0;
+        for (int i = s.length() - 1; i >= 0; i--) {
+            f[i][i] = 1;
+            for (int j = i + 1; j < s.length(); j++) {
+                if (s.charAt(i) == s.charAt(j)) {
+                    f[i][j] = f[i + 1][j - 1] + 2;
+                } else {
+                    f[i][j] = f[i][j - 1] > f[i + 1][j] ? f[i][j - 1] : f[i + 1][j];
+                }
+            }
+        }
+        System.out.println(f[0][s.length() - 1]);
+        return null;
     }
 }
