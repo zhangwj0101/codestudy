@@ -5,6 +5,8 @@
  */
 package com.leetcode.solutions;
 
+import java.util.Arrays;
+
 /**
  *
  * @author zhangwj
@@ -12,7 +14,7 @@ package com.leetcode.solutions;
 public class ZigZagConversion_6 {
 
     public static void main(String[] args) {
-        System.out.println(convert("ABCDEFGHIJKLMN", 4));
+        System.out.println(convert3("ABCDEFGHIJKLMN", 4));
     }
 
     public static String convert(String s, int numRows) {
@@ -69,4 +71,29 @@ public class ZigZagConversion_6 {
         }
     }
 
+    public static String convert3(String s, int rows) {
+        if (rows == 1) {
+            return s;
+        }
+        StringBuilder[] result = new StringBuilder[rows];
+        int i = 0, j = 0, gap = rows - 2;
+        for (i = 0; i < rows; i++) {
+            result[i] = new StringBuilder();
+        }
+        i = 0;
+        while (i < s.length()) {
+            for (j = 0; j < rows && i < s.length(); j++) {
+                result[j].append(s.charAt(i++));
+            }
+            for (j = gap; j > 0 && i < s.length(); j--) {
+                result[j].append(s.charAt(i++));
+            }
+        }
+        StringBuilder sb = new StringBuilder(s.length());
+
+        for (i = 0; i < rows; i++) {
+            sb.append(result[i]);
+        }
+        return sb.toString();
+    }
 }
