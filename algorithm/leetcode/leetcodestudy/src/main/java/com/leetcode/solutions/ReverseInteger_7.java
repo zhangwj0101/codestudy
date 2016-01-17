@@ -69,7 +69,7 @@ public class ReverseInteger_7 {
     public static int reverse2(int x) {
         int result = 0;
         int temp = Math.abs(x);
- 
+
         while (temp > 0) {
             if (result > (Integer.MAX_VALUE - temp) / 10) {
                 return 0;
