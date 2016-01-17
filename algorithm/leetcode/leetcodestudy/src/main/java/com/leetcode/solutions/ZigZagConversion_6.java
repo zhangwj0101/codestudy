@@ -5,8 +5,6 @@
  */
 package com.leetcode.solutions;
 
-import java.util.Arrays;
-
 /**
  *
  * @author zhangwj
