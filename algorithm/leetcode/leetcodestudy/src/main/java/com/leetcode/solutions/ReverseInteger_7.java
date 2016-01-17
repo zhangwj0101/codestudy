@@ -12,7 +12,8 @@ package com.leetcode.solutions;
 public class ReverseInteger_7 {
 
     public static void main(String[] args) {
-        System.out.println(reverse(-2147483412));
+        //2147483647
+        System.out.println(reverse2(1463847412));
 //        System.out.println(Integer.reverse(123));
     }
 
@@ -61,6 +62,20 @@ public class ReverseInteger_7 {
             }
             result = result * 10 + (chs[i] - '0');
 
+        }
+        return x > 0 ? result : -result;
+    }
+
+    public static int reverse2(int x) {
+        int result = 0;
+        int temp = Math.abs(x);
+ 
+        while (temp > 0) {
+            if (result > (Integer.MAX_VALUE - temp) / 10) {
+                return 0;
+            }
+            result = result * 10 + temp % 10;
+            temp /= 10;
         }
         return x > 0 ? result : -result;
     }
