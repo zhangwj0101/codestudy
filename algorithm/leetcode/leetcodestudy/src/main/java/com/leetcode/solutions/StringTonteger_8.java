@@ -46,4 +46,30 @@ public class StringTonteger_8 {
         return (int) (temp.charAt(0) == '-' ? -result : result);
     }
 
+    public int myAtoi1(String str) {
+        String temp = str.trim();
+        int i = 0;
+        long result = 0L;
+        if (temp.length() <= 0) {
+            return 0;
+        }
+        if (temp.charAt(0) == '-' || temp.charAt(0) == '+') {
+            i = 1;
+        }
+        long con = ((long) Integer.MAX_VALUE + 10);
+        boolean flag = temp.charAt(0) == '-';
+        for (; i < temp.length() && result <= con; i++) {
+            int t = temp.charAt(i) - '0';
+            if (t >= 0 && t <= 9) {
+                result = result * 10 + t;
+            } else {
+                break;
+            }
+        }
+        if (result > (long) Integer.MAX_VALUE) {
+            return flag ? Integer.MIN_VALUE : Integer.MAX_VALUE;
+        }
+        return (int) (flag ? -result : result);
+    }
+
 }
