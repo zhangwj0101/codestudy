@@ -15,11 +15,12 @@ import java.util.List;
 public class LetterCombinationsofaPhoneNumber_17 {
 
     public static void main(String[] args) {
-        List<String> letterCombinations = letterCombinations("239");
+        LetterCombinationsofaPhoneNumber_17 t = new LetterCombinationsofaPhoneNumber_17();
+        List<String> letterCombinations = t.letterCombinations("23");
         System.out.println(letterCombinations);
     }
 
-    public static List<String> letterCombinations(String digits) {
+    public static List<String> letterCombinations1(String digits) {
 
         String[] nums = {"", "", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv",
                          "wxyz"};
@@ -64,7 +65,7 @@ public class LetterCombinationsofaPhoneNumber_17 {
         return tempLists;
     }
 
-    public static List<String> letterCombinations1(String digits) {
+    public static List<String> letterCombinations2(String digits) {
 
         String[] nums = {"", "", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv",
                          "wxyz"};
@@ -82,5 +83,35 @@ public class LetterCombinationsofaPhoneNumber_17 {
         List<String> t = get(buildResults, 0);
 
         return t;
+    }
+
+    private String[] alpha = new String[]{
+        "",
+        "1", "abc", "def",
+        "ghi", "jkl", "mno",
+        "pqrs", "tuv", "wxyz"
+    };
+    private StringBuilder word;
+
+    private void dfs(List<String> res, String digits, int cur) {
+        if (cur >= digits.length()) {
+            res.add(word.toString());
+        } else {
+            for (int i = 0; i < alpha[digits.charAt(cur) - '0'].length(); ++i) {
+                word.append(alpha[digits.charAt(cur) - '0'].charAt(i));
+                dfs(res, digits, cur + 1);
+                word.deleteCharAt(word.length() - 1);
+            }
+        }
+    }
+
+    public List<String> letterCombinations(String digits) {
+        List<String> ret = new ArrayList<>();
+        word = new StringBuilder();
+        if (digits.length() == 0) {
+            return ret;
+        }
+        dfs(ret, digits, 0);
+        return ret;
     }
 }
