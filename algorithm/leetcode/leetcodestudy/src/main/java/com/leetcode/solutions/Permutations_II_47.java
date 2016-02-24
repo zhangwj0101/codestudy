@@ -45,7 +45,5 @@ public class Permutations_II_47 {
             results.add(t);
         }
         return results;
-
-
     }
 }
