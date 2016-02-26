@@ -5,7 +5,7 @@ package com.leetcode.solutions;
  */
 public class Pow_50 {
     public static void main(String[] args) {
-        System.out.println(myPow(0.000001, 2147483647));
+        System.out.println(myPow(0.01, -2147483647));
     }
 
     public static double myPow(double x, int n) {
