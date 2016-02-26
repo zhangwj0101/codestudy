@@ -9,7 +9,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- *
  * @author zhangwj
  */
 public class LetterCombinationsofaPhoneNumber_17 {
@@ -23,7 +22,7 @@ public class LetterCombinationsofaPhoneNumber_17 {
     public static List<String> letterCombinations1(String digits) {
 
         String[] nums = {"", "", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv",
-                         "wxyz"};
+                "wxyz"};
         List<String> buildResults = new ArrayList<>();
         char[] digs = digits.toCharArray();
         if (digits.length() == 0) {
@@ -68,7 +67,7 @@ public class LetterCombinationsofaPhoneNumber_17 {
     public static List<String> letterCombinations2(String digits) {
 
         String[] nums = {"", "", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv",
-                         "wxyz"};
+                "wxyz"};
         List<String> buildResults = new ArrayList<>();
         char[] digs = digits.toCharArray();
         if (digits.length() == 0) {
@@ -86,10 +85,10 @@ public class LetterCombinationsofaPhoneNumber_17 {
     }
 
     private String[] alpha = new String[]{
-        "",
-        "1", "abc", "def",
-        "ghi", "jkl", "mno",
-        "pqrs", "tuv", "wxyz"
+            "",
+            "1", "abc", "def",
+            "ghi", "jkl", "mno",
+            "pqrs", "tuv", "wxyz"
     };
     private StringBuilder word;
 

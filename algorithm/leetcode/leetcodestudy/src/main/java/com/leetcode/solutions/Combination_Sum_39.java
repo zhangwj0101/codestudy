@@ -13,24 +13,23 @@ import java.util.List;
 import java.util.Set;
 
 /**
- *
  * @author zhangwj
  */
 public class Combination_Sum_39 {
-    
+
     public static void main(String[] args) {
         int[] c = {1, 2};
         int target = 3;
         List<List<Integer>> res = combinationSum(c, target);
         System.out.println(res.size());
     }
-    
+
     public static void get(int[] candidates,
                            int index, int target,
                            List<Integer> tempResult, List<List<Integer>> results) {
-        
+
         if (target == 0) {
-            
+
             List<Integer> de = new ArrayList<>();
             for (Integer temp : tempResult) {
                 de.add(temp);
@@ -46,7 +45,7 @@ public class Combination_Sum_39 {
             }
         }
     }
-    
+
     public static List<List<Integer>> combinationSum(int[] candidates, int target) {
         List<List<Integer>> results = new ArrayList<>();
         List<Integer> tempResults = new ArrayList<>();

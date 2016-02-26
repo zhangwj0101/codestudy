@@ -1,6 +1,7 @@
 package com.leetcode.solutions;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.ListIterator;
 
@@ -12,53 +13,73 @@ public class Insert_Interval_57 {
 
     public static void main(String[] args) {
         Interval s1 = new Interval(1, 5);
-        Interval s2 = new Interval(2, 3);
+        Interval s2 = new Interval(0, 3);
         List<Interval> intervals = new ArrayList<>();
         intervals.add(s1);
         System.out.println(insert(intervals, s2));
     }
 
-    public int pos(List<Interval> intervals, Interval newInterval) {
+    public static int pos(List<Interval> intervals, Interval newInterval) {
         int left = 0;
         int right = intervals.size() - 1;
-        int diff = 0;
         int mid = 0;
         while (left <= right) {
             mid = (left + right) / 2;
             Interval temp = intervals.get(mid);
-            diff = temp.start - newInterval.start;
-            if (diff == 0) {
+            if (newInterval.start >= temp.start && newInterval.start <= temp.end) {
+                if (temp.end >= newInterval.end) {
+                    return intervals.size() - 1;
+                } else {
+                    temp.end = newInterval.end;
+                }
                 return mid;
-            } else if (diff > 0) {
+            } else if (newInterval.start < temp.start) {
                 right = mid - 1;
-            } else {
+            } else if (newInterval.start > temp.end) {
                 left = mid + 1;
             }
         }
-        return -1;
+        intervals.add(left, newInterval);
+        return left;
     }
 
     public static List<Interval> insert(List<Interval> intervals, Interval newInterval) {
 
-        if (newInterval == null) {
-            return intervals;
-        }
         if (intervals.size() == 0) {
-            List<Interval> results = new ArrayList<>();
-            results.add(newInterval);
-            return results;
+            return Arrays.asList(newInterval);
         }
-
         if (intervals.get(0).start > newInterval.end) {
             intervals.add(0, newInterval);
             return intervals;
         }
-        if (intervals.get(intervals.size() - 1).end < newInterval.start) {
-            intervals.add(newInterval);
+        int po = pos(intervals, newInterval);
+        newInterval = intervals.get(po);
+        ListIterator<Interval> intervalListIterator = intervals.listIterator(po + 1);
+        while (intervalListIterator.hasNext()) {
+            Interval te = intervalListIterator.next();
+            if (newInterval.end < te.start) {
+                break;
+            } else if (newInterval.end <= te.end) {
+                newInterval.end = te.end;
+                intervalListIterator.remove();
+                break;
+            } else {
+                intervalListIterator.remove();
+            }
+        }
+        return intervals;
+    }
+
+    public static List<Interval> insert1(List<Interval> intervals, Interval newInterval) {
+
+        if (intervals.size() == 0) {
+            return Arrays.asList(newInterval);
+        }
+        if (intervals.get(0).start > newInterval.end) {
+            intervals.add(0, newInterval);
             return intervals;
         }
         int i = intervals.size() - 1;
-        boolean finsert = false;
         for (; i >= 0; i--) {
             Interval te = intervals.get(i);
             if (newInterval.start >= te.start && newInterval.start <= te.end) {
@@ -66,6 +87,7 @@ public class Insert_Interval_57 {
                     return intervals;
                 } else {
                     te.end = newInterval.end;
+                    newInterval = te;
                 }
                 break;
             } else if (newInterval.start > te.end) {
@@ -73,6 +95,10 @@ public class Insert_Interval_57 {
                 i++;
                 break;
             }
+        }
+        if (i == -1) {
+            intervals.add(0, newInterval);
+            i++;
         }
         ListIterator<Interval> intervalListIterator = intervals.listIterator(i + 1);
         while (intervalListIterator.hasNext()) {
@@ -89,4 +115,6 @@ public class Insert_Interval_57 {
         }
         return intervals;
     }
+
+    
 }
