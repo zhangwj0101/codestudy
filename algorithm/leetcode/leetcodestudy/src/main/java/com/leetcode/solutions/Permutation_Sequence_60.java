@@ -6,26 +6,28 @@ package com.leetcode.solutions;
 public class Permutation_Sequence_60 {
 
     public static void main(String[] args) {
-        System.out.println(getPermutation(3, 4));
+        for (int i = 1; i <= 6; i++) {
+            System.out.println(getPermutation(3, i));
+        }
+
     }
 
-    public static String get(int[] nums, int k, int index, int se) {
+    public static String get(char[] nums, int k, int index, int se) {
         if (k == 1) {
             return String.valueOf(nums);
         }
         if (k >= se) {
             int j = k % se == 0 ? k / se - 1 : k / se;
-            int tt = nums[j + index];
+            char tt = nums[j + index];
             int m = j + index;
             for (; m > index; m--) {
                 nums[m] = nums[m - 1];
             }
             nums[m] = tt;
-            return get(nums, k - j * se, index + 1, se / (nums.length - 1 - index));
-        } else {
-            get(nums, k, index + 1, se);
+            k -= j * se;
         }
-        return null;
+        return get(nums, k, index + 1, se / (nums.length - 1 - index));
+
     }
 
     public static String getPermutation(int n, int k) {
@@ -33,14 +35,13 @@ public class Permutation_Sequence_60 {
             return "1";
         }
         int se = 1;
-        int[] nums = new int[n];
+        char[] nums = new char[n];
         for (int i = 0; i < n; i++) {
-            nums[i] = i + 1;
+            nums[i] = (char) (i + 1 + '0');
             se *= (i + 1);
         }
 
-        get(nums, k, 0, se / n);
+        return get(nums, k, 0, se / n);
 
-        return null;
     }
 }
