@@ -9,7 +9,6 @@ import java.util.Arrays;
 import java.util.Comparator;
 
 /**
- *
  * @author zhangwj
  */
 public class ContainerWithMostWater_11 {
@@ -52,7 +51,7 @@ public class ContainerWithMostWater_11 {
         int area = 0;
         while (lpoint < rpoint) {
             area = Math.max(area, Math.min(height[lpoint], height[rpoint])
-                                  * (rpoint - lpoint));
+                    * (rpoint - lpoint));
             if (height[lpoint] > height[rpoint]) {
                 rpoint--;
             } else {
