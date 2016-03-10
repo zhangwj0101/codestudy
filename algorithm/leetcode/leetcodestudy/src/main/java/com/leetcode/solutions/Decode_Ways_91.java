@@ -12,33 +12,22 @@ public class Decode_Ways_91 {
     }
 
 
-    public int get(String s, int i, int[] weights) {
-        while (i < s.length() && s.charAt(i) == '0') {
-            i++;
-        }
-        if (i >= s.length() - 1) {
-            return 1;
-        }
-
-        if (weights[i + 1] == 0) {
-            weights[i + 1] = get(s, i + 1, weights);
-        }
-        int s2 = (s.charAt(i) - '0') * 10 + s.charAt(i + 1) - '0';
-
-        if (weights[i + 2] == 0) {
-            weights[i + 2] = s2 > 26 ? 0 : get(s, i + 2, weights);
-        }
-        return weights[i + 1] + weights[i + 2];
-    }
-
     public int numDecodings(String s) {
-        if (s.length() < 1) {
+        if (s == null || s.length() == 0) {
             return 0;
         }
-        if (s.charAt(s.length() - 1) == '0') {
-            s = s.substring(0, s.length() - 1);
-        }
         int[] nums = new int[s.length() + 1];
-        return get(s, 0, nums);
+        nums[0] = 1;
+        nums[1] = s.charAt(0) != '0' ? 1 : 0;
+        for (int i = 2; i <= s.length(); i++) {
+            if (s.charAt(i - 1) != '0') {
+                nums[i] = nums[i - 1];
+            }
+            int twoDigits = (s.charAt(i - 2) - '0') * 10 + s.charAt(i - 1) - '0';
+            if (twoDigits >= 10 && twoDigits <= 26) {
+                nums[i] += nums[i - 2];
+            }
+        }
+        return nums[s.length()];
     }
 }
