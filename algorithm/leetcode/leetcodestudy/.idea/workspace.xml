@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2ca6c69f-a7e6-47b4-9486-55578add5066" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/leetcode/solutions/Flatten_Binary_Tree_to_Linked_List_114.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/leetcode/solutions/Pascals_Triangle_118.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/leetcode/solutions/Pascals_Triangle_II_119.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/leetcode/solutions/Path_Sum_112.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/leetcode/solutions/Path_Sum_II_113.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/leetcode/solutions/Populating_Next_Right_Pointers_in_Each_Node_116_117.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/leetcode/solutions/Group_Anagrams_49.java" afterPath="$PROJECT_DIR$/src/main/java/com/leetcode/solutions/Group_Anagrams_49.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/leetcodestudy.iml" afterPath="$PROJECT_DIR$/leetcodestudy.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/leetcode/solutions/Triangle_120.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/leetcode/solutions/Pascals_Triangle_II_119.java" afterPath="$PROJECT_DIR$/src/main/java/com/leetcode/solutions/Pascals_Triangle_II_119.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="leetcodestudy.iws" />
@@ -101,12 +95,27 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Pascals_Triangle_II_119.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Pascals_Triangle_II_119.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/leetcode/solutions/Pascals_Triangle_II_119.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.48076922">
-              <caret line="27" column="25" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
-              <folding />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="19" column="19" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
+              <folding>
+                <element signature="e#766#767#0" expanded="true" />
+                <element signature="e#811#812#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Triangle_120.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/leetcode/solutions/Triangle_120.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.4421875">
+              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -133,16 +142,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Balanced_Binary_Tree_110.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/leetcode/solutions/Balanced_Binary_Tree_110.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -163,7 +162,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/leetcode/solutions/Add_Binary_67.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/leetcode/solutions/Sqrt_x_68.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/leetcode/solutions/Climbing_Stairs_70.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/leetcode/solutions/Search_2D_Matrix_74.java" />
@@ -214,6 +212,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/leetcode/solutions/Populating_Next_Right_Pointers_in_Each_Node_116.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/leetcode/solutions/Pascals_Triangle_118.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/leetcode/solutions/Pascals_Triangle_II_119.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/leetcode/solutions/Triangle_120.java" />
       </list>
     </option>
   </component>
@@ -237,10 +236,10 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-5" />
-    <option name="y" value="106" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
     <option name="width" value="1936" />
-    <option name="height" value="1089" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -336,27 +335,7 @@
       <recent name="com.leetcode.solutions" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.Path_Sum_112">
-    <configuration default="false" name="Unique_Binary_Search_Trees_II_95" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.leetcode.solutions.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="com.leetcode.solutions.Unique_Binary_Search_Trees_II_95" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="leetcodestudy" />
-      <envs />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="JUnit.Pascals_Triangle_II_119.get">
     <configuration default="false" name="Construct_Binary_Tree_from_Preorder_and_Inorder_Traversal_105" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -437,6 +416,32 @@
       <option name="MAIN_CLASS_NAME" value="com.leetcode.solutions.Path_Sum_112" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="Pascals_Triangle_II_119.get" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.leetcode.solutions.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="leetcodestudy" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.leetcode.solutions" />
+      <option name="MAIN_CLASS_NAME" value="com.leetcode.solutions.Pascals_Triangle_II_119" />
+      <option name="METHOD_NAME" value="get" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -897,19 +902,19 @@
       <item index="4" class="java.lang.String" itemvalue="Application.Multiply_Strings_43" />
       <item index="5" class="java.lang.String" itemvalue="Application.Rotate_Image_48" />
       <item index="6" class="java.lang.String" itemvalue="Application.Decode_Ways_91" />
-      <item index="7" class="java.lang.String" itemvalue="Application.Unique_Binary_Search_Trees_II_95" />
-      <item index="8" class="java.lang.String" itemvalue="Application.Construct_Binary_Tree_from_Preorder_and_Inorder_Traversal_105" />
-      <item index="9" class="java.lang.String" itemvalue="Application.Symmetric_Tree_101" />
-      <item index="10" class="java.lang.String" itemvalue="JUnit.Path_Sum_112.test" />
-      <item index="11" class="java.lang.String" itemvalue="JUnit.Path_Sum_112" />
+      <item index="7" class="java.lang.String" itemvalue="Application.Construct_Binary_Tree_from_Preorder_and_Inorder_Traversal_105" />
+      <item index="8" class="java.lang.String" itemvalue="Application.Symmetric_Tree_101" />
+      <item index="9" class="java.lang.String" itemvalue="JUnit.Path_Sum_112.test" />
+      <item index="10" class="java.lang.String" itemvalue="JUnit.Path_Sum_112" />
+      <item index="11" class="java.lang.String" itemvalue="JUnit.Pascals_Triangle_II_119.get" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.Path_Sum_112" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.Path_Sum_112.test" />
-        <item index="2" class="java.lang.String" itemvalue="Application.Symmetric_Tree_101" />
-        <item index="3" class="java.lang.String" itemvalue="Application.Construct_Binary_Tree_from_Preorder_and_Inorder_Traversal_105" />
-        <item index="4" class="java.lang.String" itemvalue="Application.Unique_Binary_Search_Trees_II_95" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.Pascals_Triangle_II_119.get" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.Path_Sum_112" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.Path_Sum_112.test" />
+        <item index="3" class="java.lang.String" itemvalue="Application.Symmetric_Tree_101" />
+        <item index="4" class="java.lang.String" itemvalue="Application.Construct_Binary_Tree_from_Preorder_and_Inorder_Traversal_105" />
       </list>
     </recent_temporary>
   </component>
@@ -967,29 +972,29 @@
       <workItem from="1457572507231" duration="9610000" />
       <workItem from="1457583154823" duration="6175000" />
       <workItem from="1457745274635" duration="1191000" />
-      <workItem from="1457746481065" duration="8100000" />
+      <workItem from="1457746481065" duration="17922000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="174056000" />
+    <option name="totallyTimeSpent" value="183878000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-5" y="106" width="1936" height="1089" extended-state="1" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32516703" sideWeight="0.4824094" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18689582" sideWeight="0.57675904" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25501114" sideWeight="0.57675904" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18689582" sideWeight="0.42324093" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25501114" sideWeight="0.42324093" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23400854" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24147122" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24959612" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1103,13 +1108,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/leetcode/solutions/Remove_Duplicates_from_Sorted_Array_80.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="29" column="23" selection-start-line="8" selection-start-column="7" selection-end-line="29" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/leetcode/solutions/Sort_Colors_75.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1329,7 +1327,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
           <folding>
-            <element signature="e#688#689#0" expanded="true" />
+            <element signature="e#688#689#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1377,8 +1375,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="16" selection-end-column="5" />
           <folding>
-            <element signature="e#541#542#0" expanded="true" />
-            <element signature="e#595#596#0" expanded="true" />
+            <element signature="e#541#542#0" expanded="false" />
+            <element signature="e#595#596#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1388,7 +1386,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="17" column="7" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1493,9 +1491,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/leetcode/solutions/Pascals_Triangle_II_119.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.48076922">
-          <caret line="27" column="25" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
-          <folding />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="19" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
+          <folding>
+            <element signature="e#766#767#0" expanded="true" />
+            <element signature="e#811#812#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/leetcode/solutions/Triangle_120.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4421875">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
