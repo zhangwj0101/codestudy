@@ -14,9 +14,7 @@ public class Combinations_77 {
 
     public void get(int index, int n, int k, List<List<Integer>> results, List<Integer> sub) {
         if (sub.size() == k) {
-            List<Integer> su = new ArrayList<>();
-            su.addAll(sub);
-            results.add(su);
+            results.add(new ArrayList<Integer>(sub));
             return;
         }
         for (int i = index; i <= n; i++) {
