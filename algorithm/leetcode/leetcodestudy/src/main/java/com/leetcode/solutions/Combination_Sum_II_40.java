@@ -12,7 +12,6 @@ import java.util.List;
 import java.util.Set;
 
 /**
- *
  * @author zhangwj
  */
 public class Combination_Sum_II_40 {
@@ -28,11 +27,7 @@ public class Combination_Sum_II_40 {
                            List<Integer> tempResult, Set<List<Integer>> results) {
 
         if (target == 0) {
-            List<Integer> de = new ArrayList<>();
-            for (Integer temp : tempResult) {
-                de.add(temp);
-            }
-            results.add(de);
+            results.add(new ArrayList<Integer>(tempResult));
             return;
         }
         if (index >= candidates.length) {
