@@ -5,7 +5,6 @@ package com.leetcode.solutions;
  */
 public class Minimum_Window_Substring_76 {
 
-
     int initTargetHash(int[] targethash, String Target) {
         int targetnum = 0;
         for (char ch : Target.toCharArray()) {

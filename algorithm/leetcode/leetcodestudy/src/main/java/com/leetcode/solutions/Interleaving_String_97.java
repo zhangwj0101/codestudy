@@ -4,7 +4,7 @@ package com.leetcode.solutions;
  * Created by zhangwj on 16/3/15.
  */
 public class Interleaving_String_97 {
-   
+
     public boolean isInterleave(String s1, String s2, String s3) {
         if (s1 == null || s2 == null || s3 == null) {
             return false;
