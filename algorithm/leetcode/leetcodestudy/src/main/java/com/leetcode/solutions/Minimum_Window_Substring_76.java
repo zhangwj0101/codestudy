@@ -1,30 +1,45 @@
 package com.leetcode.solutions;
 
-import java.util.Stack;
-
 /**
  * Created by zhangwj on 16/3/9.
  */
 public class Minimum_Window_Substring_76 {
 
 
-    public int largestRectangleArea(int[] height) {
-        if (height == null || height.length == 0) {
-            return 0;
+    int initTargetHash(int[] targethash, String Target) {
+        int targetnum = 0;
+        for (char ch : Target.toCharArray()) {
+            targetnum++;
+            targethash[ch]++;
         }
+        return targetnum;
+    }
 
-        Stack<Integer> stack = new Stack<Integer>();
-        int max = 0;
-        for (int i = 0; i <= height.length; i++) {
-            int curt = (i == height.length) ? -1 : height[i];
-            while (!stack.isEmpty() && curt <= height[stack.peek()]) {
-                int h = height[stack.pop()];
-                int w = stack.isEmpty() ? i : i - stack.peek() - 1;
-                max = Math.max(max, h * w);
+    public String minWindow(String Source, String Target) {
+        int ans = Integer.MAX_VALUE;
+        String minStr = "";
+
+        int[] targethash = new int[256];
+
+        int targetnum = initTargetHash(targethash, Target);
+        int sourcenum = 0;
+        int j = 0, i = 0;
+        for (i = 0; i < Source.length(); i++) {
+            if (targethash[Source.charAt(i)] > 0)
+                sourcenum++;
+
+            targethash[Source.charAt(i)]--;
+            while (sourcenum >= targetnum) {
+                if (ans > i - j + 1) {
+                    ans = Math.min(ans, i - j + 1);
+                    minStr = Source.substring(j, i + 1);
+                }
+                targethash[Source.charAt(j)]++;
+                if (targethash[Source.charAt(j)] > 0)
+                    sourcenum--;
+                j++;
             }
-            stack.push(i);
         }
-
-        return max;
+        return minStr;
     }
 }
