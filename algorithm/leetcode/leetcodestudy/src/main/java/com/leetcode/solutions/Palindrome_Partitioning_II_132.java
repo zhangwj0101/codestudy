@@ -6,6 +6,7 @@ import org.junit.Test;
  * Created by zhangwj on 16/3/22.
  */
 public class Palindrome_Partitioning_II_132 {
+
     public int minCut(String s) {
 
         if (new StringBuilder(s).reverse().toString().equals(s)) {
