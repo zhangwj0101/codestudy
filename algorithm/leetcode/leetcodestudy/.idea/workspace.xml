@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f606ce1c-02be-4180-a9b4-5c89ca544280" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/findbugs-idea.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/leetcode/solutions/resource.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/leetcode/solutions/Palindrome_Partitioning_131.java" afterPath="$PROJECT_DIR$/src/main/java/com/leetcode/solutions/Palindrome_Partitioning_131.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/leetcodestudy.iml" afterPath="$PROJECT_DIR$/leetcodestudy.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/leetcode/solutions/Palindrome_Partitioning_II_132.java" afterPath="$PROJECT_DIR$/src/main/java/com/leetcode/solutions/Palindrome_Partitioning_II_132.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="leetcodestudy.iws" />
@@ -58,8 +53,6 @@
               <caret line="61" column="5" selection-start-line="11" selection-start-column="3" selection-end-line="61" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="false" />
-                <element signature="e#465#473#0" expanded="false" />
-                <element signature="e#543#551#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -70,24 +63,16 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="72" column="33" selection-start-line="72" selection-start-column="33" selection-end-line="72" selection-end-column="33" />
-              <folding>
-                <element signature="e#271#285#0" expanded="false" />
-                <element signature="e#445#473#0" expanded="false" />
-                <element signature="e#589#617#0" expanded="false" />
-                <element signature="e#662#670#0" expanded="false" />
-                <element signature="e#751#765#0" expanded="false" />
-                <element signature="e#828#836#0" expanded="false" />
-                <element signature="e#2751#2759#0" expanded="false" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Palindrome_Partitioning_131.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Palindrome_Partitioning_131.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/leetcode/solutions/Palindrome_Partitioning_131.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.0241657">
-              <caret line="104" column="25" selection-start-line="104" selection-start-column="25" selection-end-line="104" selection-end-column="25" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="114" column="0" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -98,7 +83,7 @@
       <file leaf-file-name="resource.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/leetcode/solutions/resource.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.75">
+            <state vertical-scroll-proportion="0.0">
               <caret line="1" column="22" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
               <folding />
             </state>
@@ -110,23 +95,17 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-              <folding>
-                <element signature="e#0#919#0" expanded="false" />
-                <element signature="e#326#327#0" expanded="false" />
-                <element signature="e#381#382#0" expanded="false" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Palindrome_Partitioning_II_132.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Palindrome_Partitioning_II_132.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/leetcode/solutions/Palindrome_Partitioning_II_132.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="51" column="28" selection-start-line="35" selection-start-column="7" selection-end-line="51" selection-end-column="28" />
-              <folding>
-                <element signature="method#minCut#0;class#Palindrome_Partitioning_II_132#0" expanded="false" />
-              </folding>
+            <state vertical-scroll-proportion="0.407767">
+              <caret line="20" column="9" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -138,7 +117,6 @@
               <caret line="76" column="5" selection-start-line="9" selection-start-column="3" selection-end-line="76" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="false" />
-                <element signature="e#1221#1230#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -170,10 +148,10 @@
         <option value="$PROJECT_DIR$/src/main/java/com/leetcode/solutions/Surrounded_Regions_130.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/leetcode/solutions/Word_Ladder_127.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/leetcode/solutions/Word_Ladder_II_126.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/leetcode/solutions/Palindrome_Partitioning_II_132.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/leetcode/solutions/resource.txt" />
         <option value="$PROJECT_DIR$/src/main/java/com/leetcode/solutions/resource.md" />
         <option value="$PROJECT_DIR$/src/main/java/com/leetcode/solutions/Palindrome_Partitioning_131.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/leetcode/solutions/Palindrome_Partitioning_II_132.java" />
       </list>
     </option>
   </component>
@@ -225,9 +203,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -274,6 +249,9 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -285,7 +263,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="FullScreen" value="true" />
+    <property name="FullScreen" value="false" />
     <property name="recentsLimit" value="5" />
     <property name="dynamic.classpath" value="false" />
   </component>
@@ -294,7 +272,7 @@
       <recent name="com.leetcode.solutions" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.Palindrome_Partitioning_131">
+  <component name="RunManager" selected="JUnit.Palindrome_Partitioning_II_132.testpartition">
     <configuration default="false" name="Palindrome_Partitioning_131.testpartition" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -707,9 +685,9 @@
     </list>
     <recent_temporary>
       <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.Palindrome_Partitioning_131" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.Palindrome_Partitioning_131.testpartition" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.Palindrome_Partitioning_II_132.testpartition" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.Palindrome_Partitioning_II_132.testpartition" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.Palindrome_Partitioning_131" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.Palindrome_Partitioning_131.testpartition" />
         <item index="3" class="java.lang.String" itemvalue="JUnit.Palindrome_Partitioning_II_132" />
       </list>
     </recent_temporary>
@@ -737,7 +715,9 @@
       <workItem from="1458698580334" duration="18000" />
       <workItem from="1458700063759" duration="4616000" />
       <workItem from="1458705736923" duration="210000" />
-      <workItem from="1458731186208" duration="4858000" />
+      <workItem from="1458731186208" duration="5276000" />
+      <workItem from="1458740909448" duration="78000" />
+      <workItem from="1458777444799" duration="1512000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1458623667776</created>
@@ -745,11 +725,17 @@
       <option name="project" value="LOCAL" />
       <updated>1458623667776</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="init">
+      <created>1458737217080</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1458737217080</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22927000" />
+    <option name="totallyTimeSpent" value="24935000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -757,29 +743,29 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="FindBugs-IDEA" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="FindBugs-IDEA" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24627607" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16481069" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23454158" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28944564" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24959612" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39920557" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39920557" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3326713" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
@@ -825,8 +811,6 @@
           <caret line="61" column="5" selection-start-line="11" selection-start-column="3" selection-end-line="61" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="false" />
-            <element signature="e#465#473#0" expanded="false" />
-            <element signature="e#543#551#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -835,15 +819,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="72" column="33" selection-start-line="72" selection-start-column="33" selection-end-line="72" selection-end-column="33" />
-          <folding>
-            <element signature="e#271#285#0" expanded="false" />
-            <element signature="e#445#473#0" expanded="false" />
-            <element signature="e#589#617#0" expanded="false" />
-            <element signature="e#662#670#0" expanded="false" />
-            <element signature="e#751#765#0" expanded="false" />
-            <element signature="e#828#836#0" expanded="false" />
-            <element signature="e#2751#2759#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -861,11 +837,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#919#0" expanded="false" />
-            <element signature="e#326#327#0" expanded="false" />
-            <element signature="e#381#382#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -873,9 +845,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="51" column="28" selection-start-line="35" selection-start-column="7" selection-end-line="51" selection-end-column="28" />
-          <folding>
-            <element signature="method#minCut#0;class#Palindrome_Partitioning_II_132#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -885,7 +855,6 @@
           <caret line="76" column="5" selection-start-line="9" selection-start-column="3" selection-end-line="76" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="false" />
-            <element signature="e#1221#1230#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -912,8 +881,6 @@
           <caret line="61" column="5" selection-start-line="11" selection-start-column="3" selection-end-line="61" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="false" />
-            <element signature="e#465#473#0" expanded="false" />
-            <element signature="e#543#551#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -922,15 +889,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="72" column="33" selection-start-line="72" selection-start-column="33" selection-end-line="72" selection-end-column="33" />
-          <folding>
-            <element signature="e#271#285#0" expanded="false" />
-            <element signature="e#445#473#0" expanded="false" />
-            <element signature="e#589#617#0" expanded="false" />
-            <element signature="e#662#670#0" expanded="false" />
-            <element signature="e#751#765#0" expanded="false" />
-            <element signature="e#828#836#0" expanded="false" />
-            <element signature="e#2751#2759#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -948,9 +907,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="method#minCut#0;class#Palindrome_Partitioning_II_132#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -960,7 +917,6 @@
           <caret line="76" column="5" selection-start-line="9" selection-start-column="3" selection-end-line="76" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="false" />
-            <element signature="e#1221#1230#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -994,8 +950,6 @@
           <caret line="61" column="5" selection-start-line="11" selection-start-column="3" selection-end-line="61" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="false" />
-            <element signature="e#465#473#0" expanded="false" />
-            <element signature="e#543#551#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1004,15 +958,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="72" column="33" selection-start-line="72" selection-start-column="33" selection-end-line="72" selection-end-column="33" />
-          <folding>
-            <element signature="e#271#285#0" expanded="false" />
-            <element signature="e#445#473#0" expanded="false" />
-            <element signature="e#589#617#0" expanded="false" />
-            <element signature="e#662#670#0" expanded="false" />
-            <element signature="e#751#765#0" expanded="false" />
-            <element signature="e#828#836#0" expanded="false" />
-            <element signature="e#2751#2759#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1030,9 +976,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="21" column="23" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
-          <folding>
-            <element signature="method#minCut#0;class#Palindrome_Partitioning_II_132#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1042,7 +986,6 @@
           <caret line="76" column="5" selection-start-line="9" selection-start-column="3" selection-end-line="76" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="false" />
-            <element signature="e#1221#1230#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1097,8 +1040,6 @@
           <caret line="61" column="5" selection-start-line="11" selection-start-column="3" selection-end-line="61" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="false" />
-            <element signature="e#465#473#0" expanded="false" />
-            <element signature="e#543#551#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1107,15 +1048,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#271#285#0" expanded="false" />
-            <element signature="e#445#473#0" expanded="false" />
-            <element signature="e#589#617#0" expanded="false" />
-            <element signature="e#662#670#0" expanded="false" />
-            <element signature="e#751#765#0" expanded="false" />
-            <element signature="e#828#836#0" expanded="false" />
-            <element signature="e#2751#2759#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1125,7 +1058,6 @@
           <caret line="76" column="5" selection-start-line="9" selection-start-column="3" selection-end-line="76" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="false" />
-            <element signature="e#1221#1230#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1180,8 +1112,6 @@
           <caret line="16" column="22" selection-start-line="16" selection-start-column="15" selection-end-line="16" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="false" />
-            <element signature="e#465#473#0" expanded="false" />
-            <element signature="e#543#551#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1192,7 +1122,6 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="false" />
-            <element signature="e#1221#1230#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1247,7 +1176,6 @@
           <caret line="76" column="5" selection-start-line="9" selection-start-column="3" selection-end-line="76" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="false" />
-            <element signature="e#1221#1230#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1258,8 +1186,6 @@
           <caret line="61" column="5" selection-start-line="11" selection-start-column="3" selection-end-line="61" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="false" />
-            <element signature="e#465#473#0" expanded="false" />
-            <element signature="e#543#551#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1268,15 +1194,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="72" column="33" selection-start-line="72" selection-start-column="33" selection-end-line="72" selection-end-column="33" />
-          <folding>
-            <element signature="e#271#285#0" expanded="false" />
-            <element signature="e#445#473#0" expanded="false" />
-            <element signature="e#589#617#0" expanded="false" />
-            <element signature="e#662#670#0" expanded="false" />
-            <element signature="e#751#765#0" expanded="false" />
-            <element signature="e#828#836#0" expanded="false" />
-            <element signature="e#2751#2759#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1284,39 +1202,33 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#919#0" expanded="false" />
-            <element signature="e#326#327#0" expanded="false" />
-            <element signature="e#381#382#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/leetcode/solutions/resource.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.75">
+        <state vertical-scroll-proportion="0.0">
           <caret line="1" column="22" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/leetcode/solutions/Palindrome_Partitioning_II_132.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/leetcode/solutions/Palindrome_Partitioning_131.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="51" column="28" selection-start-line="35" selection-start-column="7" selection-end-line="51" selection-end-column="28" />
+          <caret line="114" column="0" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
           <folding>
-            <element signature="method#minCut#0;class#Palindrome_Partitioning_II_132#0" expanded="false" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/leetcode/solutions/Palindrome_Partitioning_131.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/leetcode/solutions/Palindrome_Partitioning_II_132.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.0241657">
-          <caret line="104" column="25" selection-start-line="104" selection-start-column="25" selection-end-line="104" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.407767">
+          <caret line="20" column="9" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
+          <folding />
         </state>
       </provider>
     </entry>
