@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f606ce1c-02be-4180-a9b4-5c89ca544280" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/leetcode/solutions/Palindrome_Partitioning_II_132.java" afterPath="$PROJECT_DIR$/src/main/java/com/leetcode/solutions/Palindrome_Partitioning_II_132.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/leetcode/solutions/LongestPalindromicSubstring_5.java" afterPath="$PROJECT_DIR$/src/main/java/com/leetcode/solutions/LongestPalindromicSubstring_5.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/leetcode/solutions/resource.md" afterPath="$PROJECT_DIR$/src/main/java/com/leetcode/solutions/resource.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="leetcodestudy.iws" />
@@ -83,8 +84,8 @@
       <file leaf-file-name="resource.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/leetcode/solutions/resource.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="1" column="22" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
+            <state vertical-scroll-proportion="-1.5">
+              <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -100,11 +101,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Palindrome_Partitioning_II_132.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Palindrome_Partitioning_II_132.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/leetcode/solutions/Palindrome_Partitioning_II_132.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.407767">
+            <state vertical-scroll-proportion="0.0">
               <caret line="20" column="9" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LongestPalindromicSubstring_5.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/leetcode/solutions/LongestPalindromicSubstring_5.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.740638">
+              <caret line="98" column="28" selection-start-line="98" selection-start-column="28" selection-end-line="98" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -149,9 +160,10 @@
         <option value="$PROJECT_DIR$/src/main/java/com/leetcode/solutions/Word_Ladder_127.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/leetcode/solutions/Word_Ladder_II_126.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/leetcode/solutions/resource.txt" />
-        <option value="$PROJECT_DIR$/src/main/java/com/leetcode/solutions/resource.md" />
         <option value="$PROJECT_DIR$/src/main/java/com/leetcode/solutions/Palindrome_Partitioning_131.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/leetcode/solutions/Palindrome_Partitioning_II_132.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/leetcode/solutions/resource.md" />
+        <option value="$PROJECT_DIR$/src/main/java/com/leetcode/solutions/LongestPalindromicSubstring_5.java" />
       </list>
     </option>
   </component>
@@ -717,7 +729,7 @@
       <workItem from="1458705736923" duration="210000" />
       <workItem from="1458731186208" duration="5276000" />
       <workItem from="1458740909448" duration="78000" />
-      <workItem from="1458777444799" duration="1512000" />
+      <workItem from="1458777444799" duration="5661000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1458623667776</created>
@@ -731,11 +743,17 @@
       <option name="project" value="LOCAL" />
       <updated>1458737217080</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="init">
+      <created>1458778965384</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1458778965384</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24935000" />
+    <option name="totallyTimeSpent" value="29084000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -805,16 +823,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/leetcode/solutions/Word_Ladder_127.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="61" column="5" selection-start-line="11" selection-start-column="3" selection-end-line="61" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/leetcode/solutions/Word_Ladder_II_126.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1206,14 +1214,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/leetcode/solutions/resource.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1" column="22" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/leetcode/solutions/Palindrome_Partitioning_131.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1226,8 +1226,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/leetcode/solutions/Palindrome_Partitioning_II_132.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.407767">
+        <state vertical-scroll-proportion="0.0">
           <caret line="20" column="9" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/leetcode/solutions/resource.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.5">
+          <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/leetcode/solutions/LongestPalindromicSubstring_5.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.740638">
+          <caret line="98" column="28" selection-start-line="98" selection-start-column="28" selection-end-line="98" selection-end-column="28" />
           <folding />
         </state>
       </provider>
