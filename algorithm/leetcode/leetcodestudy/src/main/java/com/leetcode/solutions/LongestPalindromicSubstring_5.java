@@ -12,12 +12,6 @@ import org.junit.Test;
  */
 public class LongestPalindromicSubstring_5 {
 
-    @Test
-    public void test() {
-        String s = "sddss";
-        System.out.println(longestPalindromeC(s));
-    }
-
 
     /*
        常规方法
@@ -105,4 +99,9 @@ public class LongestPalindromicSubstring_5 {
     }
 
 
+    @Test
+    public void test() {
+        String s = "a";
+        System.out.println(longestPalindromeDPB(s));
+    }
 }
