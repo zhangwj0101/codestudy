@@ -5,7 +5,13 @@ package com.leetcode.solutions;
  */
 public class Sum_Root_to_Leaf_Numbers_129 {
 
-
+    /**
+     * 递归求解
+     *
+     * @param node
+     * @param pre
+     * @return
+     */
     public int get(TreeNode node, int pre) {
         if (node == null) {
             return 0;
@@ -16,17 +22,12 @@ public class Sum_Root_to_Leaf_Numbers_129 {
         if (node.left == null && node.right == null) {
             return pre;
         }
-        if (node.left != null) {
-            left = get(node.left, pre);
-        }
-        if (node.right != null) {
-            right = get(node.right, pre);
-        }
-        return left + right;
+        return get(node.left, pre) + get(node.right, pre);
     }
 
     public int sumNumbers(TreeNode node) {
 
         return get(node, 0);
     }
+
 }
