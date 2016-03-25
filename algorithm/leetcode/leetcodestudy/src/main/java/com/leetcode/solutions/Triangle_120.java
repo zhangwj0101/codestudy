@@ -29,5 +29,4 @@ public class Triangle_120 {
         return D[0];
     }
 
-
 }
