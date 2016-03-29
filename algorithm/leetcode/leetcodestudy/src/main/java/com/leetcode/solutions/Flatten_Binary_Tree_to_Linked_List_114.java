@@ -32,4 +32,40 @@ public class Flatten_Binary_Tree_to_Linked_List_114 {
             }
         }
     }
+
+    /**
+     * 递归的方式解决
+     *
+     * @param root
+     * @return
+     */
+    // return : the tail of the list.
+    public TreeNode dfs(TreeNode root) {
+        if (root == null) {
+            return null;
+        }
+
+        TreeNode left = root.left;
+        TreeNode right = root.right;
+
+        // Init the root.
+        root.left = null;
+        root.right = null;
+
+        TreeNode tail = root;
+
+        // connect the left tree.
+        if (left != null) {
+            tail.right = left;
+            tail = dfs(left);
+        }
+
+        // connect the right tree.
+        if (right != null) {
+            tail.right = right;
+            tail = dfs(right);
+        }
+
+        return tail;
+    }
 }

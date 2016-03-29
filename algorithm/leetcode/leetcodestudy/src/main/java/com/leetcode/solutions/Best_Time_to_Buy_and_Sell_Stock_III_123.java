@@ -57,8 +57,6 @@ public class Best_Time_to_Buy_and_Sell_Stock_III_123 {
         for (int i = len - 1; i >= 0; i--) {
             max = Math.max(max, prices[i]);
             profile = Math.max(profile, max - prices[i]);
-
-            // sum the left profit and the right profit.
             ret = Math.max(ret, profile + leftProfile[i]);
         }
 

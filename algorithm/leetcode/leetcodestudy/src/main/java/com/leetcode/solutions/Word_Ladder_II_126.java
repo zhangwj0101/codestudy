@@ -22,11 +22,8 @@ public class Word_Ladder_II_126 {
 
         List<List<String>> listStart = new ArrayList<List<String>>();
 
-        // 唯一的路径
-        List<String> path = new ArrayList<String>();
-        path.add(start);
-        listStart.add(path);
-
+        List<String> strings = Arrays.asList(start);
+        listStart.add(strings);
         // 将头节点放入
         map.put(start, listStart);
 
@@ -90,4 +87,5 @@ public class Word_Ladder_II_126 {
 
         return ret;
     }
+
 }

@@ -28,6 +28,19 @@ public class Path_Sum_112 {
         return get(root, 0, sum);
     }
 
+    public boolean hasPathSum1(TreeNode root, int sum) {
+        if (root == null) {
+            return false;
+        }
+
+        if (root.left == null && root.right == null && sum == root.val) {
+            return true;
+        }
+
+        return hasPathSum1(root.left, sum - root.val)
+                || hasPathSum1(root.right, sum - root.val);
+    }
+
     @Test
     public void test() {
         TreeNode s1 = new TreeNode(1);
