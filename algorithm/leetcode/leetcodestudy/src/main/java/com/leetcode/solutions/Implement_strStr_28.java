@@ -5,18 +5,20 @@
  */
 package com.leetcode.solutions;
 
+import org.junit.Test;
+
 /**
- *
  * @author zhangwj
  */
 public class Implement_strStr_28 {
 
-    public static void main(String[] args) {
+    @Test
+    public void test() {
 
         System.out.println(strStr("mississippi", "issip"));
     }
 
-    public static int strStr(String haystack, String needle) {
+    public int strStr(String haystack, String needle) {
 
         if (haystack.length() < needle.length()) {
             return -1;
@@ -36,7 +38,6 @@ public class Implement_strStr_28 {
                     point1 = point1 - subpoint + 1;
                 }
                 subpoint = 0;
-
             }
         }
         if (subpoint == s2.length) {
@@ -45,5 +46,21 @@ public class Implement_strStr_28 {
 
         return -1;
 
+    }
+
+    public int[] getNext(String needle) {
+        int[] next = new int[needle.length()];
+        int k = -1;
+
+        for (int i = 0; i < needle.length(); i++) {
+            if (k == -1 || needle.charAt(i) == needle.charAt(k)) {
+                i++;
+                k++;
+                next[i] = k;
+            } else {
+                k = next[k];
+            }
+        }
+        return null;
     }
 }
