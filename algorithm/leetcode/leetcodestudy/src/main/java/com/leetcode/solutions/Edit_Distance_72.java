@@ -12,6 +12,9 @@ public class Edit_Distance_72 {
         System.out.println(ed.minDistance(s1, s2));
     }
 
+    /*
+     动态规划算法解决
+     */
     public int minDistance(String word1, String word2) {
         if (word1.length() == 0 || word2.length() == 0) {
             return word1.length() == 0 ? word2.length() : word1.length();

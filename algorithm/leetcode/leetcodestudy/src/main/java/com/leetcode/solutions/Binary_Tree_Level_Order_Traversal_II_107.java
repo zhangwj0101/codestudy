@@ -26,9 +26,8 @@ public class Binary_Tree_Level_Order_Traversal_II_107 {
                     queues.add(remove.right);
                 }
             }
-            results.add(temp);
+            results.add(0, temp);
         }
-        Collections.reverse(results);
         return results;
     }
 
