@@ -34,4 +34,36 @@ public class Validate_Binary_Search_Tree_98 {
         }
         return i == nums.size() - 1;
     }
+
+    TreeNode pre = null;
+
+    public boolean isValidBST1(TreeNode root) {
+        // Just use the inOrder traversal to solve the problem.
+
+        return dfs4(root);
+    }
+
+    public boolean dfs4(TreeNode root) {
+        if (root == null) {
+            return true;
+        }
+
+        // Judge the left tree.
+        if (!dfs4(root.left)) {
+            return false;
+        }
+
+        // judge the sequence.
+        if (pre != null && root.val <= pre.val) {
+            return false;
+        }
+        pre = root;
+
+        // Judge the right tree.
+        if (!dfs4(root.right)) {
+            return false;
+        }
+
+        return true;
+    }
 }
