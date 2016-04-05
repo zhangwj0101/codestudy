@@ -11,7 +11,6 @@ public class Recover_Binary_Search_Tree_99 {
     public void recoverTree(TreeNode root) {
         inOrder(root);
 
-        // swap the value of first and second node.
         int tmp = first.val;
         first.val = second.val;
         second.val = tmp;

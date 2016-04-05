@@ -1,5 +1,7 @@
 package com.leetcode.solutions;
 
+import org.junit.Test;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -8,59 +10,38 @@ import java.util.List;
  */
 public class Unique_Binary_Search_Trees_II_95 {
 
-    public static void main(String[] args) {
+    @Test
+    public void test() {
         Unique_Binary_Search_Trees_II_95 un = new Unique_Binary_Search_Trees_II_95();
-        System.out.println(un.generateTrees(3).size());
+        System.out.println(un.generateTrees(0).size());
     }
 
-    public List<TreeNode> merge(List<TreeNode> l, List<TreeNode> r, int i) {
+    public List<TreeNode> get(int left, int right) {
         List<TreeNode> res = new ArrayList<>();
-
-        if (l == null && r != null) {
-            for (TreeNode rt : r) {
-                TreeNode s = new TreeNode(i);
-                s.right = rt;
-                res.add(s);
-            }
-        } else if (l != null && r == null) {
-            for (TreeNode lt : l) {
-                TreeNode s = new TreeNode(i);
-                s.left = lt;
-                res.add(s);
-            }
-        } else if (l != null && r != null) {
-            for (TreeNode lt : l) {
-                for (TreeNode rt : r) {
-                    TreeNode s = new TreeNode(i);
-                    s.left = lt;
-                    s.right = rt;
-                    res.add(s);
+        if (left <= right) {
+            for (int i = left; i <= right; i++) {
+                List<TreeNode> l = get(left, i - 1);
+                List<TreeNode> r = get(i + 1, right);
+                for (TreeNode ll : l) {
+                    for (TreeNode lr : r) {
+                        TreeNode s = new TreeNode(i);
+                        s.left = ll;
+                        s.right = lr;
+                        res.add(s);
+                    }
                 }
             }
+
         } else {
-            TreeNode s = new TreeNode(i);
-            res.add(s);
+            res.add(null);
         }
         return res;
     }
 
-    public List<TreeNode> get(int left, int right) {
-        if (left <= right) {
-            List<TreeNode> res = new ArrayList<>();
-            for (int i = left; i <= right; i++) {
-                List<TreeNode> l = get(left, i - 1);
-                List<TreeNode> r = get(i + 1, right);
-                res.addAll(merge(l, r, i));
-            }
-            return res;
-        }
-        return null;
-    }
-
     public List<TreeNode> generateTrees(int n) {
-
-        List<TreeNode> result = get(1, n);
-
-        return result == null ? new ArrayList<TreeNode>() : result;
+        if (n == 0) {
+            return new ArrayList<>();
+        }
+        return get(1, n);
     }
 }

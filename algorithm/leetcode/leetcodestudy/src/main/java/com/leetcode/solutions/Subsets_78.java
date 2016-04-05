@@ -1,5 +1,7 @@
 package com.leetcode.solutions;
 
+import org.junit.Test;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -9,9 +11,10 @@ import java.util.List;
  */
 public class Subsets_78 {
 
-    public static void main(String[] args) {
+    @Test
+    public void test() {
         int[] nums = {1, 2, 3};
-        System.out.println(new Subsets_78().subsets(nums));
+        System.out.println(new Subsets_78().subsets1(nums));
     }
 
     public List<List<Integer>> subsets(int[] nums) {
@@ -37,5 +40,28 @@ public class Subsets_78 {
             results.add(sub);
         }
         return results;
+    }
+
+    public List<List<Integer>> subsets1(int[] S) {
+        List<List<Integer>> ret = new ArrayList<List<Integer>>();
+        if (S == null) {
+            return ret;
+        }
+
+        Arrays.sort(S);
+
+        dfs(S, 0, new ArrayList<Integer>(), ret);
+
+        return ret;
+    }
+
+    public void dfs(int[] S, int index, List<Integer> path, List<List<Integer>> ret) {
+        ret.add(new ArrayList<Integer>(path));
+
+        for (int i = index; i < S.length; i++) {
+            path.add(S[i]);
+            dfs(S, i + 1, path, ret);
+            path.remove(path.size() - 1);
+        }
     }
 }
