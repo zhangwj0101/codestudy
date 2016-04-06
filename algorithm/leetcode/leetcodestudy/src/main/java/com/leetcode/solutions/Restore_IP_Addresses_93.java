@@ -37,4 +37,46 @@ public class Restore_IP_Addresses_93 {
         }
         return ret;
     }
+
+    public List<String> restoreIpAddresses1(String s) {
+        if (s == null) {
+            return null;
+        }
+
+        List<String> ret = new ArrayList<>();
+        List<String> path = new ArrayList<>();
+
+        dfs(s, 0, path, ret);
+        return ret;
+    }
+
+    public void dfs(String s, int index, List<String> path, List<String> ret) {
+        if (path.size() == 4) {
+            if (index == s.length()) {
+                StringBuilder sb = new StringBuilder();
+                for (String str : path) {
+                    sb.append(str);
+                    sb.append('.');
+                }
+                sb.deleteCharAt(sb.length() - 1);
+                ret.add(sb.toString());
+            }
+            return;
+        }
+
+        int len = s.length();
+        for (int i = index; i < index + 3 && i < len; i++) {
+            if (s.charAt(index) == '0' && i > index) {
+                break;
+            }
+            String pre = s.substring(index, i + 1);
+            int num = Integer.parseInt(pre);
+            if (num > 255) {
+                continue;
+            }
+            path.add(pre);
+            dfs(s, i + 1, path, ret);
+            path.remove(path.size() - 1);
+        }
+    }
 }

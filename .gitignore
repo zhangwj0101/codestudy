@@ -1,4 +1,4 @@
-*/target/
-*/.idea/
-*/leetcodestudy.iml
-*.class
+**/target/
+**/.idea/
+**/leetcodestudy.iml
+**.class

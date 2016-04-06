@@ -1,5 +1,9 @@
 package com.leetcode.solutions;
 
+import org.junit.Test;
+
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Stack;
 
 /**
@@ -7,12 +11,13 @@ import java.util.Stack;
  */
 public class Reverse_Linked_List_II_92 {
 
-    public static void main(String[] args) {
+    @Test
+    public void tesr() {
         Reverse_Linked_List_II_92 s = new Reverse_Linked_List_II_92();
         ListNode s1 = new ListNode(3);
         ListNode s2 = new ListNode(5);
         s1.next = s2;
-        ListNode result = s.reverseBetween(s1, 1, 2);
+        ListNode result = s.reverseBetween(s1, 2, 2);
         s.print(result);
     }
 
@@ -25,36 +30,32 @@ public class Reverse_Linked_List_II_92 {
 
     }
 
-
     public ListNode reverseBetween(ListNode head, int m, int n) {
 
         ListNode p = head;
         ListNode result = new ListNode(0);
-        ListNode st = result;
-        Stack<ListNode> stacks = new Stack<>();
+        result.next = p;
+        ListNode pre = result;
         int len = 0;
+        Stack<ListNode> stacks = new Stack<>();
+
         while (p != null) {
             len++;
-            if (len < m || len > n) {
-                result.next = p;
-                result = result.next;
-            } else if (len < n) {
+            if (len < m) {
+                pre = p;
+            } else if (len >= m && len <= n) {
                 stacks.push(p);
-            } else {
-                ListNode tem = p;
-                p = p.next;
-                tem.next = null;
-                stacks.push(tem);
-                while (!stacks.isEmpty()) {
-                    result.next = stacks.pop();
-                    result = result.next;
-                }
-                continue;
+            } else if (len > n) {
+                break;
             }
-
             p = p.next;
         }
-        result.next = null;
-        return st.next;
+        while (!stacks.isEmpty()) {
+            ListNode node = stacks.pop();
+            pre.next = node;
+            pre = pre.next;
+        }
+        pre.next = p;
+        return result.next;
     }
 }
