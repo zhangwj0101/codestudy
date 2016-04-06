@@ -11,6 +11,7 @@ public class Subsets_78 {
 
     public static void main(String[] args) {
         int[] nums = {1, 2, 3};
+        List<String> s = new ArrayList<>();
         System.out.println(new Subsets_78().subsets(nums));
     }
 
