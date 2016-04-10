@@ -1,5 +1,10 @@
 package com.leetcode.solutions;
 
+import org.junit.Test;
+
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by zhangwj on 16/3/4.
  */
@@ -32,5 +37,11 @@ public class Recover_Binary_Search_Tree_99 {
         }
         pre = root;
         inOrder(root.right);
+    }
+
+    @Test
+    public void tes() {
+        List s = new ArrayList<String>();
+        List<Object> s1 = s;
     }
 }
