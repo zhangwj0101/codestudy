@@ -1,5 +1,7 @@
 package com.leetcode.solutions;
 
+import org.junit.Test;
+
 import java.math.BigDecimal;
 
 /**
@@ -7,15 +9,47 @@ import java.math.BigDecimal;
  */
 public class Valid_Number_65 {
 
-    public static void main(String[] args) {
-        Valid_Number_65 sed = new Valid_Number_65();
+    @Test
+    public void main() {
+
         String s = "1 a";
-        sed.isNumber(s);
+        isNumber(s);
     }
 
-    public boolean isNumber(String s) {
 
-        char[] chs = s.trim().toCharArray();
-        return false;
+    public boolean isNumber(String s) {
+        if (s == null) {
+            return false;
+        }
+
+        s = s.trim();
+        boolean num = false;
+        boolean dot = false;
+        boolean exp = false;
+
+        for (int i = 0; i < s.length(); i++) {
+            char ch = s.charAt(i);
+            if (ch >= '0' && ch <= '9') {
+                num = true;
+            } else if (ch == '.') {
+                if (dot || exp) {
+                    return false;
+                }
+                dot = true;
+            } else if (ch == 'e') {
+                if (exp || !num) {
+                    return false;
+                }
+                exp = true;
+                num = false;
+            } else if (ch == '+' || ch == '-') {
+                if (i != 0 && s.charAt(i - 1) != 'e') {
+                    return false;
+                }
+            } else {
+                return false;
+            }
+        }
+        return num;
     }
 }

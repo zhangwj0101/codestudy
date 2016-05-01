@@ -1,5 +1,6 @@
 package com.leetcode.solutions;
 
+import java.util.ArrayList;
 import java.util.Stack;
 
 /**
@@ -33,5 +34,26 @@ public class Simplify_Path_71 {
                 sb.append("/" + res.get(i));
             return sb.toString();
         }
+    }
+
+    public String simplifyPath1(String path) {
+        String result = "/";
+        String[] stubs = path.split("/+");
+        ArrayList<String> paths = new ArrayList<String>();
+        for (String s : stubs) {
+            if (s.equals("..")) {
+                if (paths.size() > 0) {
+                    paths.remove(paths.size() - 1);
+                }
+            } else if (!s.equals(".") && !s.equals("")) {
+                paths.add(s);
+            }
+        }
+        for (String s : paths) {
+            result += s + "/";
+        }
+        if (result.length() > 1)
+            result = result.substring(0, result.length() - 1);
+        return result;
     }
 }

@@ -1,5 +1,7 @@
 package com.leetcode.solutions;
 
+import org.junit.Test;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -7,14 +9,6 @@ import java.util.List;
  * Created by zhangwj on 16/3/1.
  */
 public class Text_Justification_68 {
-
-    public static void main(String[] args) {
-        String[] words = {"This", "is", "an", "example", "of", "text", "justification."};
-        int maxWidth = 16;
-        Text_Justification_68 te = new Text_Justification_68();
-        List<String> strings = te.fullJustify(words, maxWidth);
-        System.out.println(strings);
-    }
 
 
     private String getOneLine(String[] words, int start, int end, int rest, int L) {
@@ -57,4 +51,13 @@ public class Text_Justification_68 {
         ret.add(getOneLine(words, start_pos, sz - 1, 0, L));
         return ret;
     }
+
+    @Test
+    public void test() {
+        String[] words = {"This", "is", "an", "example", "of", "text", "justification."};
+        int maxWidth = 16;
+        List<String> strings = fullJustify(words, maxWidth);
+        System.out.println(strings);
+    }
+
 }
