@@ -1,14 +1,18 @@
 package com.leetcode.solutions;
 
+import org.junit.Test;
+
 /**
  * Created by zhangwj on 16/2/29.
  */
 public class Unique_Paths_62 {
-    public static void main(String[] args) {
+
+    @Test
+    public void test() {
         System.out.println(uniquePaths(3, 3));
     }
 
-    public static int uniquePaths(int m, int n) {
+    public int uniquePaths(int m, int n) {
 
         if (m == 1 || n == 1) {
             return 1;

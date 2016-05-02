@@ -1,5 +1,7 @@
 package com.leetcode.solutions;
 
+import org.junit.Test;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
@@ -9,7 +11,8 @@ import java.util.Stack;
  */
 public class Rotate_List_61 {
 
-    public static void main(String[] args) {
+    @Test
+    public void test() {
         ListNode s1 = new ListNode(1);
         ListNode s2 = new ListNode(2);
         s1.next = s2;
@@ -18,6 +21,42 @@ public class Rotate_List_61 {
             System.out.printf("%3d,", re.val);
             re = re.next;
         }
+    }
+
+    public ListNode rotateRight1(ListNode head, int n) {
+        if (head == null) {
+            return head;
+        }
+
+        int len = getLen(head);
+
+        // 不需要重复地rotate.
+        n = n % len;
+        ListNode end = head;
+        while (n > 0) {
+            end = end.next;
+            n--;
+        }
+
+        ListNode pre = head;
+        while (end.next != null) {
+            pre = pre.next;
+            end = end.next;
+        }
+        // 这一句很重要，变成循环链表后，可以处理n = 0的情况。因为尾节点的下一个节点是头节点
+        end.next = head;
+        ListNode headNew = pre.next;
+        pre.next = null;
+        return headNew;
+    }
+
+    public int getLen(ListNode head) {
+        int len = 0;
+        while (head != null) {
+            len++;
+            head = head.next;
+        }
+        return len;
     }
 
     public static ListNode rotateRight(ListNode head, int k) {
