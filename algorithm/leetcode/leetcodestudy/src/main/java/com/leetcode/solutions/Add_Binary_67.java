@@ -1,6 +1,10 @@
 package com.leetcode.solutions;
 
 import java.math.BigInteger;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 
 /**
  * Created by zhangwj on 16/3/1.
@@ -30,5 +34,4 @@ public class Add_Binary_67 {
         }
         return result.reverse().toString();
     }
-
 }

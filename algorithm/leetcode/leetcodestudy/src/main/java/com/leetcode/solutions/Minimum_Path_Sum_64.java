@@ -1,14 +1,16 @@
 package com.leetcode.solutions;
 
+import org.junit.Test;
+
 /**
  * Created by zhangwj on 16/2/29.
  */
 public class Minimum_Path_Sum_64 {
 
-    public static void main(String[] args) {
-        Minimum_Path_Sum_64 s = new Minimum_Path_Sum_64();
+    @Test
+    public void test() {
         int[][] grid = {{9, 1, 4, 8}};
-        System.out.println(s.minPathSum(grid));
+        System.out.println(minPathSum(grid));
     }
 
     public int minPathSum(int[][] grid) {
