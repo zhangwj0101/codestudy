@@ -13,7 +13,6 @@ import java.util.List;
 import java.util.Set;
 
 /**
- *
  * @author zhangwj
  */
 public class Sum3_15 {
@@ -28,7 +27,7 @@ public class Sum3_15 {
         Arrays.sort(nums);
         List<List<Integer>> res = new ArrayList<>();
         for (int i = 0, j = nums.length - 1; i < j - 1; i++) {
-            for (int k = i + 1; k < j;) {
+            for (int k = i + 1; k < j; ) {
                 if (nums[i] + nums[k] + nums[j] > 0) {
                     j--;
                 } else if (nums[i] + nums[k] + nums[j] < 0) {

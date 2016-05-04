@@ -29,7 +29,6 @@ public class Combination_Sum_39 {
                            List<Integer> tempResult, List<List<Integer>> results) {
 
         if (target == 0) {
-
             List<Integer> de = new ArrayList<>();
             for (Integer temp : tempResult) {
                 de.add(temp);

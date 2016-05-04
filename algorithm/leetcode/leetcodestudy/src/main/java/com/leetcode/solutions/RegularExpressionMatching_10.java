@@ -6,7 +6,6 @@
 package com.leetcode.solutions;
 
 /**
- *
  * @author zhangwj
  */
 public class RegularExpressionMatching_10 {
@@ -40,8 +39,8 @@ public class RegularExpressionMatching_10 {
             dp[i & 1][0] = false;
             for (int j = 1; j <= lenp; ++j) {
                 dp[i & 1][j] = ((p.charAt(j - 1) == s.charAt(i - 1) || p.charAt(j - 1) == '.') && dp[1 - (i & 1)][j - 1])
-                               || p.charAt(j - 1) == '*' && (p.charAt(j - 2) == s.charAt(i - 1) || p.charAt(j - 2) == '.') && dp[1 - (i & 1)][j]
-                               || (j >= 2 && p.charAt(j - 1) == '*' && dp[i & 1][j - 2]);
+                        || p.charAt(j - 1) == '*' && (p.charAt(j - 2) == s.charAt(i - 1) || p.charAt(j - 2) == '.') && dp[1 - (i & 1)][j]
+                        || (j >= 2 && p.charAt(j - 1) == '*' && dp[i & 1][j - 2]);
             }
         }
 

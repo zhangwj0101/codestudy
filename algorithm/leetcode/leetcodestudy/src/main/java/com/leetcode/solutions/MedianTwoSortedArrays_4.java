@@ -8,7 +8,6 @@ package com.leetcode.solutions;
 import java.util.Arrays;
 
 /**
- *
  * @author zhangwj
  */
 public class MedianTwoSortedArrays_4 {
@@ -39,7 +38,7 @@ public class MedianTwoSortedArrays_4 {
         long start = System.currentTimeMillis();
         int i = 0, j = 0, k = 0;
         int[] c = new int[nums1.length + nums2.length];
-        for (; i < nums1.length && j < nums2.length;) {
+        for (; i < nums1.length && j < nums2.length; ) {
             if (nums1[i] < nums2[j]) {
                 c[k++] = nums1[i];
                 i++;
@@ -148,7 +147,7 @@ public class MedianTwoSortedArrays_4 {
             len = findKthSortedArrays(A, 0, m, B, 0, n, (n + m) / 2 + 1);
         } else {
             len = (findKthSortedArrays(A, 0, m, B, 0, n, (n + m) / 2 + 1)
-                   + findKthSortedArrays(A, 0, m, B, 0, n, (n + m) / 2)) / 2.0;
+                    + findKthSortedArrays(A, 0, m, B, 0, n, (n + m) / 2)) / 2.0;
         }
         System.out.println(System.currentTimeMillis() - start);
         return len;
@@ -163,7 +162,7 @@ public class MedianTwoSortedArrays_4 {
         int pb = len - pa;
         int astart = 0, aend = nums1.length;
         int bstart = 0, bend = nums2.length;
-        for (; astart < aend && bstart < bend;) {
+        for (; astart < aend && bstart < bend; ) {
             left = right;
             if (len == 1) {
                 return Math.min(nums1[astart], nums2[bstart]);
@@ -227,10 +226,10 @@ public class MedianTwoSortedArrays_4 {
      * however, the median may actually be present at that point too, the
      * algorithm just doesn't check that.
      *
-     * @param nums1 the first array
-     * @param nums2 the second array
+     * @param nums1   the first array
+     * @param nums2   the second array
      * @param leCount the number of the elements in the merged array that are
-     * less than or equal to the median (including itself, but not beyond)
+     *                less than or equal to the median (including itself, but not beyond)
      * @return an array of one index and one insertion point
      */
     private static int[] findMedian(int[] nums1, int[] nums2, int leCount) {
@@ -247,7 +246,7 @@ public class MedianTwoSortedArrays_4 {
             int le2 = leCount - (mid1 + 1);
             assert le2 >= 0 && le2 <= nums2.length;
             if ((le2 == 0 || nums2[le2 - 1] <= nums1[mid1])
-                && (le2 == nums2.length || nums2[le2] >= nums1[mid1])) {
+                    && (le2 == nums2.length || nums2[le2] >= nums1[mid1])) {
                 return new int[]{mid1, -le2 - 1};
             } else if (le2 > 0 && nums2[le2 - 1] > nums1[mid1]) {
                 // missed, the median must be to the right
@@ -279,7 +278,7 @@ public class MedianTwoSortedArrays_4 {
         long start = System.currentTimeMillis();
         int i = 0, j = 0, k = 0;
         int[] c = new int[nums1.length + nums2.length];
-        for (; i < nums1.length && j < nums2.length;) {
+        for (; i < nums1.length && j < nums2.length; ) {
             if (nums1[i] < nums2[j]) {
                 c[k++] = nums1[i];
                 i++;

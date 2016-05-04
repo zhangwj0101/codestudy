@@ -6,7 +6,6 @@
 package com.leetcode.solutions;
 
 /**
- *
  * @author zhangwj
  */
 public class AddTwoNumbers_2 {

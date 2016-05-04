@@ -9,7 +9,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- *
  * @author zhangwj
  */
 public class Generate_Parentheses_22 {

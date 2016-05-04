@@ -1,5 +1,7 @@
 package com.leetcode.solutions;
 
+import org.junit.Test;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -9,8 +11,9 @@ import java.util.List;
  */
 public class N_Queens_51 {
 
-    public static void main(String[] args) {
-        List<List<String>> lists = new N_Queens_51().solveNQueens(4);
+    @Test
+    public void main() {
+        List<List<String>> lists = solveNQueens(4);
         System.out.println(lists);
     }
 

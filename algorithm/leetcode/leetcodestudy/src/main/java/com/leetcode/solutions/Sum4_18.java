@@ -10,7 +10,6 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- *
  * @author zhangwj
  */
 public class Sum4_18 {
@@ -25,12 +24,12 @@ public class Sum4_18 {
         List<List<Integer>> results = new ArrayList<>();
 
         Arrays.sort(nums);
-        for (int i = 0; i < nums.length - 3;) {
+        for (int i = 0; i < nums.length - 3; ) {
             int subTarget = target - nums[i];
 
-            for (int k = i + 1; k < nums.length - 2;) {
+            for (int k = i + 1; k < nums.length - 2; ) {
                 int end = nums.length - 1;
-                for (int t = k + 1; t < end;) {
+                for (int t = k + 1; t < end; ) {
                     if (nums[k] + nums[t] + nums[end] < subTarget) {
                         t++;
                     } else if (nums[k] + nums[t] + nums[end] > subTarget) {

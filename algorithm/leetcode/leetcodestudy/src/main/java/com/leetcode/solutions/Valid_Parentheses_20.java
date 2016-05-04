@@ -8,7 +8,6 @@ package com.leetcode.solutions;
 import java.util.Stack;
 
 /**
- *
  * @author zhangwj
  */
 public class Valid_Parentheses_20 {

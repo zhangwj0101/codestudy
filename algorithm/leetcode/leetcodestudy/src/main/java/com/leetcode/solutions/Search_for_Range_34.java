@@ -6,7 +6,6 @@
 package com.leetcode.solutions;
 
 /**
- *
  * @author zhangwj
  */
 public class Search_for_Range_34 {

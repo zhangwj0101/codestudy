@@ -8,7 +8,6 @@ package com.leetcode.solutions;
 import java.math.BigDecimal;
 
 /**
- *
  * @author zhangwj
  */
 public class LongestSubstringWithoutRepeatingCharacters_3 {

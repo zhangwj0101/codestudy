@@ -1,10 +1,14 @@
 package com.leetcode.solutions;
 
+import org.junit.Test;
+
 /**
  * Created by zhangwj on 16/2/25.
  */
 public class Rotate_Image_48 {
-    public static void main(String[] args) {
+
+    @Test
+    public void main() {
         int[][] matrix = {{1, 2}, {3, 4}};
         rotate(matrix);
         for (int i = 0; i < matrix.length; i++) {

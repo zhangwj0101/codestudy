@@ -6,14 +6,13 @@
 package com.leetcode.solutions;
 
 /**
- *
  * @author zhangwj
  */
 public class ReverseInteger_7 {
 
     public static void main(String[] args) {
         //2147483647
-        System.out.println(reverse2(1463847412));
+//        System.out.println(reverse2(1463847412));
 //        System.out.println(Integer.reverse(123));
     }
 
@@ -78,5 +77,17 @@ public class ReverseInteger_7 {
             temp /= 10;
         }
         return x > 0 ? result : -result;
+    }
+
+    public int reverse4(int x) {
+        long ret = 0;
+        while (x != 0) {
+            ret = ret * 10 + x % 10;
+            x /= 10;
+        }
+        if (ret > Integer.MAX_VALUE || ret < Integer.MIN_VALUE) {
+            return 0;
+        }
+        return (int) ret;
     }
 }

@@ -1,6 +1,8 @@
 package com.leetcode.solutions;
 
 
+import org.junit.Test;
+
 import java.util.Arrays;
 
 /**
@@ -9,7 +11,9 @@ import java.util.Arrays;
 
 public class Wildcard_Matching_44 {
 
-    public static void main(String[] args) {
+
+    @Test
+    public void main() {
         String s = "aa", p = "a*";
         System.out.println(isMatch1(s, p));
     }
@@ -23,8 +27,7 @@ public class Wildcard_Matching_44 {
      * @param pi
      * @return
      */
-    public static boolean match(String s, String p, int si, int pi) {
-
+    public boolean match(String s, String p, int si, int pi) {
 
         if (pi >= p.length()) {
             return si >= s.length();
@@ -35,8 +38,6 @@ public class Wildcard_Matching_44 {
             }
             return pi >= p.length();
         }
-
-
         if (s.charAt(si) == p.charAt(pi) || p.charAt(pi) == '?') {
             return match(s, p, si + 1, pi + 1);
         } else {
@@ -51,7 +52,7 @@ public class Wildcard_Matching_44 {
         return false;
     }
 
-    public static boolean isMatch(String s, String p) {
+    public boolean isMatch(String s, String p) {
         return match(s, p, 0, 0);
     }
 
@@ -62,9 +63,8 @@ public class Wildcard_Matching_44 {
      * @param p
      * @return
      */
-    public static boolean isMatch1(String s, String p) {
+    public boolean isMatch1(String s, String p) {
         boolean[][] flag = new boolean[p.length()][s.length()];
-
         if (p.length() < 1) {
             return s.length() < 1;
         }

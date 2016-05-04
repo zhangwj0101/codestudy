@@ -5,17 +5,20 @@
  */
 package com.leetcode.solutions;
 
+import org.junit.Test;
+
 /**
  * @author zhangwj
  */
 public class First_Missing_Positive_41 {
 
-    public static void main(String[] args) {
+    @Test
+    public void main() {
         int[] nums = {3, 4, -1, 1};
         System.out.println(firstMissingPositive(nums));
     }
 
-    public static int firstMissingPositive(int[] nums) {
+    public int firstMissingPositive(int[] nums) {
         int[] buffer = new int[1024];
         int i = 0;
         for (i = 0; i < nums.length; i++) {
@@ -29,6 +32,34 @@ public class First_Missing_Positive_41 {
             }
         }
         return i;
+    }
+
+    public int firstMissingPositive1(int[] A) {
+        if (A == null) {
+            return 0;
+        }
+
+        int len = A.length;
+        for (int i = 0; i < len; i++) {
+
+            while (A[i] <= len && A[i] > 0 && A[A[i] - 1] != A[i]) {
+                swap(A, i, A[i] - 1);
+            }
+        }
+
+        for (int i = 0; i < len; i++) {
+            if (A[i] != i + 1) {
+                return i + 1;
+            }
+        }
+
+        return len + 1;
+    }
+
+    public static void swap(int[] A, int i, int j) {
+        int tmp = A[i];
+        A[i] = A[j];
+        A[j] = tmp;
     }
 
 }

@@ -6,7 +6,6 @@
 package com.leetcode.solutions;
 
 /**
- *
  * @author zhangwj
  */
 public class Sudoku_Solver_37 {
@@ -69,8 +68,8 @@ public class Sudoku_Solver_37 {
 
     public boolean isValid(int row, int col, int val) {
         return rowValid[row][val] == 0
-               && columnValid[col][val] == 0
-               && subBox[row / 3 * 3 + col / 3][val] == 0;
+                && columnValid[col][val] == 0
+                && subBox[row / 3 * 3 + col / 3][val] == 0;
     }
 
 }

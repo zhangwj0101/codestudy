@@ -1,5 +1,7 @@
 package com.leetcode.solutions;
 
+import org.junit.Test;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -8,8 +10,10 @@ import java.util.List;
  * Created by zhangwj on 16/2/25.
  */
 public class N_Queens_II_52 {
-    public static void main(String[] args) {
-        int lists = new N_Queens_II_52().totalNQueens(4);
+
+    @Test
+    public void main() {
+        int lists = totalNQueens(4);
         System.out.println(lists);
     }
 

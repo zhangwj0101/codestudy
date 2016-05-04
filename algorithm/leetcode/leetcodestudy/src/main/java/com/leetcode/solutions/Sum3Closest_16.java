@@ -8,7 +8,6 @@ package com.leetcode.solutions;
 import java.util.Arrays;
 
 /**
- *
  * @author zhangwj
  */
 public class Sum3Closest_16 {
@@ -29,7 +28,7 @@ public class Sum3Closest_16 {
         int j = nums.length - 1;
         result = nums[0] + nums[1] + nums[2];
         for (int i = 0; i < j - 1; i++) {
-            for (int k = i + 1; k < j;) {
+            for (int k = i + 1; k < j; ) {
                 int temp = nums[i] + nums[k] + nums[j];
                 if (temp < target) {
                     k++;
@@ -38,10 +37,9 @@ public class Sum3Closest_16 {
                 } else {
                     return target;
                 }
-
                 result = Math.abs(result - target) > Math.abs(temp - target) ? temp : result;
             }
-            j = nums.length-1;
+            j = nums.length - 1;
         }
         return result;
     }

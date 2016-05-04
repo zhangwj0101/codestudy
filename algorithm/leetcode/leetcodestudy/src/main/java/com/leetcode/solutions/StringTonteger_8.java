@@ -6,7 +6,6 @@
 package com.leetcode.solutions;
 
 /**
- *
  * @author zhangwj
  */
 public class StringTonteger_8 {
@@ -25,7 +24,6 @@ public class StringTonteger_8 {
         if (temp.charAt(0) == '+' || temp.charAt(0) == '-') {
             i = 1;
         }
-
         for (; i < temp.length(); i++) {
             int t = temp.charAt(i) - '0';
             if (t >= 0 && t <= 9) {

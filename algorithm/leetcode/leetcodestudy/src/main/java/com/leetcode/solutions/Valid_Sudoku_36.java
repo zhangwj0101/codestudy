@@ -8,7 +8,6 @@ package com.leetcode.solutions;
 import java.util.Arrays;
 
 /**
- *
  * @author zhangwj
  */
 public class Valid_Sudoku_36 {
@@ -33,8 +32,8 @@ public class Valid_Sudoku_36 {
             Arrays.fill(rowValid, 0);
             for (int j = 0; j < board.length; j++) {
                 if (!checkValid(rowValid, board[i][j] - '0')
-                    || !checkValid(columnValid[j], board[i][j] - '0')
-                    || !checkValid(subBoxValid[i / 3 * 3 + j / 3], board[i][j] - '0')) {
+                        || !checkValid(columnValid[j], board[i][j] - '0')
+                        || !checkValid(subBoxValid[i / 3 * 3 + j / 3], board[i][j] - '0')) {
                     return false;
                 }
             }

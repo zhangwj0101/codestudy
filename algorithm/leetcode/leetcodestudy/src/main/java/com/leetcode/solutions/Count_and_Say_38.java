@@ -6,7 +6,6 @@
 package com.leetcode.solutions;
 
 /**
- *
  * @author zhangwj
  */
 public class Count_and_Say_38 {
@@ -26,7 +25,7 @@ public class Count_and_Say_38 {
         for (int i = 1; i < n; i++) {
             char[] temp = results[i - 1].toCharArray();
             sb.delete(0, sb.length());
-            for (int j = 0; j < temp.length;) {
+            for (int j = 0; j < temp.length; ) {
                 char t = temp[j];
                 int len = 1;
                 j++;

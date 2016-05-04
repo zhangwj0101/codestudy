@@ -11,7 +11,6 @@ import java.util.List;
 import java.util.Map;
 
 /**
- *
  * @author zhangwj
  */
 public class Substring_with_Concatenation_of_All_Words_30 {

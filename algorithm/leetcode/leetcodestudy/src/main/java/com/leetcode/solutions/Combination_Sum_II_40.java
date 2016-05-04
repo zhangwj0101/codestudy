@@ -37,7 +37,6 @@ public class Combination_Sum_II_40 {
             tempResult.add(candidates[i]);
             get(candidates, i + 1, target - candidates[i], tempResult, results);
             tempResult.remove(tempResult.size() - 1);
-
         }
     }
 
