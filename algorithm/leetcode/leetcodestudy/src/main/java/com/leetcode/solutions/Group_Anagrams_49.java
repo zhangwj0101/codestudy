@@ -13,7 +13,6 @@ public class Group_Anagrams_49 {
 
         String[] strs = {"eat", "tea", "tan", "ate", "nat", "bat"};
         System.out.println(groupAnagrams(strs));
-
     }
 
     public static List<List<String>> groupAnagrams(String[] strs) {
@@ -27,19 +26,17 @@ public class Group_Anagrams_49 {
         for (String t : strs) {
             char[] chs = t.toCharArray();
             Arrays.sort(chs);
-            String temp = String.valueOf(chs);
-            if (maps.containsKey(temp)) {
-                maps.get(temp).add(t);
-            } else {
-                List<String> ts = new ArrayList<String>();
-                ts.add(t);
-                maps.put(temp, ts);
-            }
+        String temp = String.valueOf(chs);
+        if (maps.containsKey(temp)) {
+            maps.get(temp).add(t);
+        } else {
+            List<String> ts = new ArrayList<String>();
+            ts.add(t);
+            maps.put(temp, ts);
         }
-
+    }
         results.addAll(maps.values());
 
         return results;
     }
-
 }

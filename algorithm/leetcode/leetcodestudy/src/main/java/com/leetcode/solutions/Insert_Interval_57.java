@@ -19,6 +19,7 @@ public class Insert_Interval_57 {
         System.out.println(insert(intervals, s2));
     }
 
+
     public static int pos(List<Interval> intervals, Interval newInterval) {
         int left = 0;
         int right = intervals.size() - 1;

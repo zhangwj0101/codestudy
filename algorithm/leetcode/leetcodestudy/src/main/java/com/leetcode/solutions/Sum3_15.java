@@ -5,6 +5,8 @@
  */
 package com.leetcode.solutions;
 
+import org.junit.Test;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -17,39 +19,82 @@ import java.util.Set;
  */
 public class Sum3_15 {
 
-    public static void main(String[] args) {
-        int[] s = {0, 0, 0, 0};
-        threeSum(s);
+    @Test
+    public void test() {
+        int[] s = {-1, 0, 1, 2, -1, -4};
+        System.out.println(threeSum1(s));
     }
 
-    public static List<List<Integer>> threeSum(int[] nums) {
+    public List<List<Integer>> threeSum1(int[] nums) {
 
-        Arrays.sort(nums);
         List<List<Integer>> res = new ArrayList<>();
-        for (int i = 0, j = nums.length - 1; i < j - 1; i++) {
-            for (int k = i + 1; k < j; ) {
-                if (nums[i] + nums[k] + nums[j] > 0) {
-                    j--;
-                } else if (nums[i] + nums[k] + nums[j] < 0) {
-                    k++;
+
+        if (nums == null || nums.length < 3) {
+            return res;
+        }
+        Arrays.sort(nums);
+        for (int i = 0; i < nums.length - 2; i++) {
+            if (i > 0 && nums[i] == nums[i - 1]) {
+                continue;
+            }
+            int start = i + 1, end = nums.length - 1;
+            while (start < end) {
+                int tempsum = nums[i] + nums[start] + nums[end];
+                if (tempsum == 0) {
+                    res.add(Arrays.asList(nums[i], nums[start], nums[end]));
+                    start++;
+                    end--;
+                    while (start < end && nums[start] == nums[start - 1]) {
+                        start++;
+                    }
+                    while (start < end && nums[end] == nums[end + 1]) {
+                        end--;
+                    }
+                } else if (tempsum > 0) {
+                    end--;
                 } else {
-                    res.add(Arrays.asList(nums[i], nums[k], nums[j]));
-                    j--;
-                    k++;
-                    while (k < j && nums[k] == nums[k - 1]) {
-                        k++;
-                    }
-                    while (k < j && nums[j] == nums[j + 1]) {
-                        j--;
-                    }
+                    start++;
                 }
             }
-            j = nums.length - 1;
-            while (i <= j - 2 && nums[i] == nums[i + 1]) {
-                ++i;
+
+        }
+        return res;
+    }
+
+    public List<List<Integer>> threeSum(int[] nums) {
+        List<List<Integer>> results = new ArrayList<>();
+        int start = 0, target = 0;
+        Arrays.sort(nums);
+        System.out.println(Arrays.toString(nums));
+        for (int i = start; i < nums.length - 2; i++) {
+            if (i > start && nums[i] == nums[i - 1]) {
+                continue;
+            }
+            int left = i + 1;
+            int end = nums.length - 1;
+            while (left < end) {
+                if (nums[i] + nums[left] + nums[end] == target) {
+                    List<Integer> temRes = new ArrayList<>();
+                    temRes.add(nums[i]);
+                    temRes.add(nums[left]);
+                    temRes.add(nums[end]);
+                    results.add(temRes);
+                    left++;
+                    end--;
+                    while (left < end && nums[left] == nums[left - 1]) {
+                        left++;
+                    }
+                    while (end > left && nums[end] == nums[end + 1]) {
+                        end--;
+                    }
+
+                } else if (nums[i] + nums[left] + nums[end] > target) {
+                    end--;
+                } else {
+                    left++;
+                }
             }
         }
-
-        return res;
+        return results;
     }
 }

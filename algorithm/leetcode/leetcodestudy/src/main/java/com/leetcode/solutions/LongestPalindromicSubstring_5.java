@@ -42,30 +42,6 @@ public class LongestPalindromicSubstring_5 {
         return result;
     }
 
-    /*
-        标记数组加DP方法
-     */
-    public String longestPalindromeDP(String s) {
-        if (s == null || s.length() == 0) {
-            return s;
-        }
-        boolean[][] flag = new boolean[s.length()][s.length()];
-        int start = 0;
-        int end = 0;
-
-        for (int i = 0; i < s.length(); i++) {
-            for (int j = 0; j <= i; j++) {
-                flag[j][i] = s.charAt(j) == s.charAt(i) && (i - j <= 2 || flag[j + 1][i - 1]);
-                if (flag[j][i]) {
-                    if (end - start < i - j) {
-                        start = j;
-                        end = i;
-                    }
-                }
-            }
-        }
-        return s.substring(start, end + 1);
-    }
 
     /*
        DP方法
@@ -101,7 +77,29 @@ public class LongestPalindromicSubstring_5 {
 
     @Test
     public void test() {
-        String s = "a";
-        System.out.println(longestPalindromeDPB(s));
+        String s = "aba";
+        System.out.println(longestPalindrome3(s));
+    }
+
+    public String longestPalindrome3(String s) {
+        if (s == null || s.length() <= 1) {
+            return s;
+        }
+        boolean[][] flag = new boolean[s.length()][s.length()];
+        flag[0][0] = true;
+        int start = 0, end = 0;
+        for (int i = 1; i < s.length(); i++) {
+            for (int j = i - 1; j >= 0; j--) {
+                if (s.charAt(j) == s.charAt(i) && (i - j < 3 || flag[j + 1][i - 1])) {
+                    flag[j][i] = true;
+                    if (end - start < i - j) {
+                        start = j;
+                        end = i;
+                    }
+                }
+            }
+
+        }
+        return s.substring(start, end + 1);
     }
 }

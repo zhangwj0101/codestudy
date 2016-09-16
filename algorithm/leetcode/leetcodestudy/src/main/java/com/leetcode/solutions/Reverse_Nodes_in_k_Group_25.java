@@ -5,24 +5,26 @@
  */
 package com.leetcode.solutions;
 
-import static com.leetcode.solutions.Remove_Nth_Node_From_End_of_List_19.print;
+
+import org.junit.Test;
 
 /**
- *
  * @author zhangwj
  */
 public class Reverse_Nodes_in_k_Group_25 {
 
-    public static void main(String[] args) {
+    @Test
+    public void main() {
 
         ListNode s1 = new ListNode(1);
         ListNode s2 = new ListNode(2);
+//        ListNode s3 = new ListNode(3);
         s1.next = s2;
-        ListNode reverseKGroup = reverseKGroup(s1, 2);
-        print(reverseKGroup);
+//        s2.next = s3;
+        ListNode reverseKGroup = reverseKGroup2(s1, 2);
     }
 
-    public static ListNode reverseKGroup(ListNode head, int k) {
+    public ListNode reverseKGroup(ListNode head, int k) {
 
         if (k == 1) {
             return head;
@@ -54,5 +56,46 @@ public class Reverse_Nodes_in_k_Group_25 {
             }
         }
         return rres.next;
+    }
+
+
+    public ListNode reverseKGroup2(ListNode head, int k) {
+
+        if (k < 2) {
+            return head;
+        }
+        int count = 1;
+        ListNode cur = head;
+        ListNode start = null, pre = null, next = null;
+        while (cur != null) {
+            next = cur.next;
+            if (count == k) {
+                start = pre == null ? head : pre.next;
+                head = pre == null ? cur : head;
+                reverse(pre, start, cur, next);
+                pre = start;
+                count = 0;
+            }
+            count++;
+            cur = next;
+        }
+        return head;
+    }
+
+    public void reverse(ListNode left, ListNode start, ListNode end, ListNode right) {
+
+        ListNode next = null;
+        ListNode pre = null;
+        ListNode st = start;
+        while (start != right) {
+            next = start.next;
+            start.next = pre;
+            pre = start;
+            start = next;
+        }
+        st.next = right;
+        if (left != null) {
+            left.next = pre;
+        }
     }
 }

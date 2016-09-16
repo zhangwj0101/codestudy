@@ -5,6 +5,8 @@
  */
 package com.leetcode.solutions;
 
+import org.junit.Test;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
@@ -16,40 +18,38 @@ import java.util.Set;
  */
 public class Combination_Sum_II_40 {
 
-    public static void main(String[] args) {
-        int[] candidates = {1};
-        int target = 1;
+    @Test
+    public void main() {
+        int[] candidates = {10, 1, 2, 7, 6, 1, 5};
+        int target = 8;
         System.out.println(combinationSum2(candidates, target));
     }
 
-    public static void get(int[] candidates,
-                           int index, int target,
-                           List<Integer> tempResult, Set<List<Integer>> results) {
-
-        if (target == 0) {
-            results.add(new ArrayList<Integer>(tempResult));
-            return;
-        }
-        if (index >= candidates.length) {
-            return;
-        }
-        for (int i = index; i < candidates.length && candidates[i] <= target; i++) {
-            tempResult.add(candidates[i]);
-            get(candidates, i + 1, target - candidates[i], tempResult, results);
-            tempResult.remove(tempResult.size() - 1);
-        }
-    }
 
     public static List<List<Integer>> combinationSum2(int[] candidates, int target) {
         List<List<Integer>> results = new ArrayList<>();
-        Set<List<Integer>> sresults = new HashSet<>();
-        List<Integer> tempResults = new ArrayList<>();
 
         Arrays.sort(candidates);
-        get(candidates, 0, target, tempResults, sresults);
-        for (List<Integer> te : sresults) {
-            results.add(te);
-        }
+        get(results, new ArrayList<Integer>(), candidates, 0, target);
         return results;
+    }
+
+    public static void get(List<List<Integer>> sets, List<Integer> tempRes, int[] candidade, int index, int target) {
+        if (target == 0) {
+            sets.add(new ArrayList<Integer>(tempRes));
+            return;
+        }
+        if (index >= candidade.length || candidade[index] > target || target < 0) {
+            return;
+        }
+
+        for (int i = index; i < candidade.length && candidade[index] <= target; i++) {
+            if (i > index && candidade[i] == candidade[i - 1]) {
+                continue;
+            }
+            tempRes.add(candidade[i]);
+            get(sets, tempRes, candidade, i + 1, target - candidade[i]);
+            tempRes.remove(tempRes.size() - 1);
+        }
     }
 }

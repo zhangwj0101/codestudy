@@ -5,69 +5,46 @@
  */
 package com.leetcode.solutions;
 
+import org.junit.Test;
+
 /**
  * @author zhangwj
  */
 public class StringTonteger_8 {
 
-    public static void main(String[] args) {
-        System.out.println(myAtoi("9223372036854775809"));
+    @Test
+    public void test() {
+        System.out.println(myAtoi("-2147483648"));
     }
 
-    public static int myAtoi(String str) {
-        String temp = str.trim();
-        int i = 0;
-        long result = 0L;
-        if (str.length() <= 0) {
-            return 0;
-        }
-        if (temp.charAt(0) == '+' || temp.charAt(0) == '-') {
-            i = 1;
-        }
-        for (; i < temp.length(); i++) {
-            int t = temp.charAt(i) - '0';
-            if (t >= 0 && t <= 9) {
-                result = result * 10 + t;
+
+    public int myAtoi(String str) {
+        long result = 0;
+        str = str.trim();
+        boolean fushu = false, zhegnshu = false;
+        for (char ch : str.toCharArray()) {
+            if (ch >= '0' && ch <= '9') {
+                result = result * 10 + ch - '0';
+            } else if (ch == '-') {
+                if (fushu || zhegnshu) {
+                    return 0;
+                }
+                fushu = true;
+            } else if (ch == '+') {
+                if (fushu || zhegnshu) {
+                    return 0;
+                }
+                zhegnshu = true;
             } else {
                 break;
             }
-            if (result > Integer.MAX_VALUE) {
-                break;
+            if (!fushu && result > Integer.MAX_VALUE) {
+                return Integer.MAX_VALUE;
+            }
+            if (fushu && -result < Integer.MIN_VALUE) {
+                return Integer.MIN_VALUE;
             }
         }
-        if (result > Integer.MAX_VALUE && temp.charAt(0) == '-') {
-            return Integer.MIN_VALUE;
-        }
-        if (result > Integer.MAX_VALUE) {
-            return Integer.MAX_VALUE;
-        }
-        return (int) (temp.charAt(0) == '-' ? -result : result);
+        return (int) (fushu ? -result : result);
     }
-
-    public int myAtoi1(String str) {
-        String temp = str.trim();
-        int i = 0;
-        long result = 0L;
-        if (temp.length() <= 0) {
-            return 0;
-        }
-        if (temp.charAt(0) == '-' || temp.charAt(0) == '+') {
-            i = 1;
-        }
-        long con = ((long) Integer.MAX_VALUE + 10);
-        boolean flag = temp.charAt(0) == '-';
-        for (; i < temp.length() && result <= con; i++) {
-            int t = temp.charAt(i) - '0';
-            if (t >= 0 && t <= 9) {
-                result = result * 10 + t;
-            } else {
-                break;
-            }
-        }
-        if (result > (long) Integer.MAX_VALUE) {
-            return flag ? Integer.MIN_VALUE : Integer.MAX_VALUE;
-        }
-        return (int) (flag ? -result : result);
-    }
-
 }

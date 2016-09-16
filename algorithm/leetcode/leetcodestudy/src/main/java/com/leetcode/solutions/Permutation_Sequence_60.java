@@ -8,11 +8,14 @@ import java.util.LinkedList;
 public class Permutation_Sequence_60 {
 
     public static void main(String[] args) {
+        System.out.println(getPermutation1(3, 3));
         for (int i = 1; i <= 6; i++) {
-            System.out.println(getPermutation(3, i));
+            System.out.println(getPermutation1(3, i));
         }
 
     }
+
+
 
     public static String get(char[] nums, int k, int index, int se) {
         if (k == 1) {
@@ -47,7 +50,7 @@ public class Permutation_Sequence_60 {
 
     }
 
-    public String getPermutation1(int n, int k) {
+    public static String getPermutation1(int n, int k) {
         // 1:17 -> 1:43
         LinkedList<Character> digits = new LinkedList<Character>();
 

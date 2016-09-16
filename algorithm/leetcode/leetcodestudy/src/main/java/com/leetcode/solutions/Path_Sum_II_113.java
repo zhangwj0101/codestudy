@@ -42,6 +42,4 @@ public class Path_Sum_II_113 {
         findSum(result, solution, root.right, sum);
         solution.remove(solution.size() - 1);
     }
-
-
 }

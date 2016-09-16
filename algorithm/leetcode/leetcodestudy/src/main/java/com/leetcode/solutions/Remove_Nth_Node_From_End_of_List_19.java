@@ -5,54 +5,56 @@
  */
 package com.leetcode.solutions;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
- *
  * @author zhangwj
  */
 public class Remove_Nth_Node_From_End_of_List_19 {
 
-    public static void main(String[] args) {
-        ListNode s1 = new ListNode(1);
-        ListNode s2 = new ListNode(2);
-        ListNode s3 = new ListNode(3);
-        ListNode s4 = new ListNode(4);
-        ListNode s5 = new ListNode(5);
-        s1.next = s2;
-        s2.next = s3;
-        s3.next = s4;
-        s4.next = s5;
-        print(s1);
-        print(removeNthFromEnd(s1, 4));
-    }
-
-    public static void print(ListNode p) {
-        while (p != null) {
-            System.out.print(" ," + p.val);
-            p = p.next;
-        }
-        System.out.println("");
-    }
 
     public static ListNode removeNthFromEnd(ListNode head, int n) {
 
-        ListNode p = head;
-        ListNode pre = head;
-        int t = 0;
-        int len = 0;
-        while (p.next != null) {
-            if (t < n) {
-                t++;
-            } else {
-                pre = pre.next;
-            }
-            len++;
-            p = p.next;
-        }
-        if (len == n - 1) {
-            return pre.next;
-        }
-        pre.next = pre.next.next;
+        ListNode dummy = new ListNode(0);
+        dummy.next = head;
 
+        ListNode slow = dummy;
+        ListNode fast = dummy;
+
+        while (n > 0) {
+            fast = fast.next;
+            n--;
+        }
+        while (fast.next != null) {
+            fast = fast.next;
+            slow = slow.next;
+        }
+        slow.next = slow.next.next;
+
+        return dummy.next;
+    }
+
+    public static ListNode removeNthFromEnd1(ListNode head, int n) {
+
+        ListNode fast = head;
+        ListNode slow = head;
+        if (n < 0) {
+            return head;
+        }
+        while (n >= 0 && fast != null) {
+            fast = fast.next;
+            n--;
+        }
+        if (n >= 0) {
+            return fast == null ? head.next : head;
+        }
+        while (fast != null) {
+            fast = fast.next;
+            slow = slow.next;
+        }
+
+        slow.next = slow.next.next;
         return head;
     }
 }

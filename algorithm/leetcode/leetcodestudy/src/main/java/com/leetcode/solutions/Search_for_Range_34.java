@@ -20,7 +20,6 @@ public class Search_for_Range_34 {
     public static int[] searchRange(int[] nums, int target) {
         int[] results = {-1, -1};
         int start = 0, end = nums.length - 1;
-
         while (start <= end) {
             int mid = (start + end) / 2;
             if (nums[mid] == target) {

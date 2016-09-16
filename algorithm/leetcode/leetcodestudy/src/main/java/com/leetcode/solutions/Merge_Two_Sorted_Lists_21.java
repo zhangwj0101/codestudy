@@ -5,31 +5,32 @@
  */
 package com.leetcode.solutions;
 
+import org.junit.Test;
+
 /**
  * @author zhangwj
  */
 public class Merge_Two_Sorted_Lists_21 {
 
-    public static void main(String[] args) {
+    @Test
+    public void test() {
 
     }
 
-    public static ListNode mergeTwoLists(ListNode l1, ListNode l2) {
-        ListNode p1 = l1;
-        ListNode p2 = l2;
-        ListNode result = new ListNode(0);
-        ListNode temp = result;
-        while (p1 != null && p2 != null) {
-            if (p1.val < p2.val) {
-                result = (result.next = p1);
-                p1 = p1.next;
+    public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
+        ListNode p = new ListNode(0);
+        ListNode res = p;
+        while (l1 != null && l2 != null) {
+            if (l1.val <= l2.val) {
+                p.next = l1;
+                l1 = l1.next;
             } else {
-                result = (result.next = p2);
-                p2 = p2.next;
+                p.next = l2;
+                l2 = l2.next;
             }
+            p = p.next;
         }
-        result.next = (p1 == null) ? p2 : p1;
-        return temp.next;
+        p.next = l1 == null ? l2 : l1;
+        return res.next;
     }
-
 }

@@ -6,12 +6,11 @@
 package com.leetcode.solutions;
 
 /**
- *
  * @author zhangwj
  */
 public class Divide_Two_Integers_29 {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
         System.out.println(divide(-2147483648, -1));
     }

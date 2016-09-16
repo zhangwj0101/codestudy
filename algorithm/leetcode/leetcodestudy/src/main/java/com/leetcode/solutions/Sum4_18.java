@@ -5,59 +5,110 @@
  */
 package com.leetcode.solutions;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import org.junit.Test;
+
+import java.util.*;
 
 /**
  * @author zhangwj
  */
 public class Sum4_18 {
 
-    public static void main(String[] args) {
-        int[] nums = {-3, -2, -1, 0, 0, 1, 2, 3};
+    @Test
+    public void test() {
+        int[] nums = {1, 0, -1, 0, -2, 2};
         int target = 0;
-        System.out.println(fourSum(nums, target));
+        System.out.println(fourSum1(nums, target));
     }
+
 
     public static List<List<Integer>> fourSum(int[] nums, int target) {
         List<List<Integer>> results = new ArrayList<>();
 
         Arrays.sort(nums);
-        for (int i = 0; i < nums.length - 3; ) {
-            int subTarget = target - nums[i];
+        for (int i = 0; i <= nums.length - 4; i++) {
+            if (i > 0 && nums[i] == nums[i - 1]) {
+                continue;
+            }
+            for (int j = i + 1; j <= nums.length - 3; j++) {
+                if (j > i + 1 && nums[j] == nums[j - 1]) {
+                    continue;
+                }
 
-            for (int k = i + 1; k < nums.length - 2; ) {
-                int end = nums.length - 1;
-                for (int t = k + 1; t < end; ) {
-                    if (nums[k] + nums[t] + nums[end] < subTarget) {
-                        t++;
-                    } else if (nums[k] + nums[t] + nums[end] > subTarget) {
+                int start = j + 1, end = nums.length - 1;
+                while (start < end) {
+                    int tempSum = nums[i] + nums[j] + nums[start] + nums[end];
+                    if (tempSum == target) {
+                        results.add(Arrays.asList(nums[i], nums[j], nums[start], nums[end]));
+                        start++;
                         end--;
-                    } else {
-                        results.add(Arrays.asList(nums[i], nums[k], nums[t], nums[end]));
-                        int tempt = t++;
-                        int tempend = end--;
-                        while (t < end && nums[t] == nums[tempt]) {
-                            t++;
+                        while (start < end && nums[start] == nums[start - 1]) {
+                            start++;
                         }
-                        while (end > t && nums[end] == nums[tempend]) {
+                        while (start < end && nums[end] == nums[end + 1]) {
                             end--;
                         }
+                    } else if (tempSum > target) {
+                        end--;
+                    } else {
+                        start++;
                     }
                 }
-
-                int tempk = k++;
-                while (k < nums.length - 2 && nums[k] == nums[tempk]) {
-                    k++;
-                }
-            }
-            int tempk = i++;
-            while (i < nums.length - 3 && nums[i] == nums[tempk]) {
-                i++;
             }
         }
         return results;
     }
 
+    public List<List<Integer>> fourSum1(int[] nums, int target) {
+        List<List<Integer>> results = new ArrayList<>();
+
+        Arrays.sort(nums);
+        for (int i = 0; i < nums.length - 3; i++) {
+            if (i > 0 && nums[i] == nums[i - 1]) {
+                continue;
+            }
+            List<List<Integer>> lists = threeSum(nums, i + 1, target - nums[i]);
+            if (lists.size() > 0) {
+                for (List<Integer> t : lists) {
+                    t.add(0, nums[i]);
+                }
+                results.addAll(lists);
+            }
+        }
+        return results;
+    }
+
+    public List<List<Integer>> threeSum(int[] nums, int start, int target) {
+        List<List<Integer>> results = new ArrayList<>();
+
+        for (int i = start; i < nums.length - 2; i++) {
+            if (i > start && nums[i] == nums[i - 1]) {
+                continue;
+            }
+            int left = i + 1;
+            int end = nums.length - 1;
+            while (left < end) {
+                if (nums[i] + nums[left] + nums[end] == target) {
+                    List<Integer> temRes = new ArrayList<>();
+                    temRes.add(nums[i]);
+                    temRes.add(nums[left]);
+                    temRes.add(nums[end]);
+                    results.add(temRes);
+                    left++;
+                    end--;
+                    while (left < end && nums[left] == nums[left - 1]) {
+                        left++;
+                    }
+                    while (end > left && nums[end] == nums[end + 1]) {
+                        end--;
+                    }
+                } else if (nums[i] + nums[left] + nums[end] > target) {
+                    end--;
+                } else {
+                    left++;
+                }
+            }
+        }
+        return results;
+    }
 }

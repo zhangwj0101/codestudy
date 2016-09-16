@@ -2,44 +2,14 @@ package com.leetcode.solutions;
 
 import java.math.BigInteger;
 import java.util.Arrays;
+import java.util.Observable;
 
 /**
  * Created by zhangwj on 16/2/23.
  */
 public class Multiply_Strings_43 {
     public static void main(String[] args) {
-        System.out.println(multiply("123", "456"));
-    }
-
-    public static String multiply(String num1, String num2) {
-
-        String s1 = num1.length() > num2.length() ? num1 : num2;
-        String s2 = num1.length() > num2.length() ? num2 : num1;
-
-        String num = new StringBuilder(s2).reverse().toString();
-        StringBuilder sb = new StringBuilder(s1).reverse();
-        char[] result = new char[num1.length() + num2.length() + 1];
-        Arrays.fill(result, '0');
-        int left = 0, k = 0;
-        for (int i = 0; i < num.length(); i++) {
-            if (i > 0) {
-                sb.insert(0, '0');
-            }
-            k = 0;
-            left = 0;
-            for (int j = 0; j < sb.length(); j++) {
-                int temp = (num.charAt(i) - '0') * (sb.charAt(j) - '0') + left + result[j] - '0';
-                left = temp / 10;
-                temp %= 10;
-                result[k++] = (char) (temp + '0');
-            }
-            result[k++] = (char) (left + '0');
-        }
-
-        while (k > 0 && result[k] == '0') {
-            k--;
-        }
-        return new StringBuilder(new String(result, 0, k + 1)).reverse().toString();
+        System.out.println(multiply3("456", "23"));
     }
 
     public String multiply1(String num1, String num2) {
@@ -74,5 +44,34 @@ public class Multiply_Strings_43 {
             sb.deleteCharAt(0);
         }
         return sb.toString();
+    }
+
+    public static String multiply3(String num1, String num2) {
+        StringBuilder sb = new StringBuilder();
+
+        int[] res = new int[num1.length() + num2.length() + 1];
+        int left = 0, k = res.length - 1, t = 0;
+        for (int i = num1.length() - 1; i >= 0; i--) {
+            t = k;
+            for (int j = num2.length() - 1; j >= 0; j--) {
+                int temp = (num1.charAt(i) - '0') * (num2.charAt(j) - '0') + left + res[t];
+                left = temp / 10;
+                res[t--] = temp % 10;
+            }
+            if (left > 0) {
+                res[t--] = left;
+                left = 0;
+            }
+            k--;
+        }
+        left = 0;
+        while (left < res.length && res[left] == 0) {
+            left++;
+        }
+
+        while (left < res.length) {
+            sb.append(res[left++]);
+        }
+        return sb.length() == 0 ? "0" : sb.toString();
     }
 }

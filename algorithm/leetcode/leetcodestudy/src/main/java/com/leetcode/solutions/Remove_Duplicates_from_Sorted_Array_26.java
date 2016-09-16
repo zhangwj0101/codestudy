@@ -5,37 +5,36 @@
  */
 package com.leetcode.solutions;
 
+import org.junit.Test;
+
 import java.util.Arrays;
 
 /**
- *
  * @author zhangwj
  */
 public class Remove_Duplicates_from_Sorted_Array_26 {
 
-    public static void main(String[] args) {
+    @Test
+    public void main() {
 
         int[] nums = {1, 1, 2};
         System.out.println(removeDuplicates(nums));
     }
 
-    public static int removeDuplicates(int[] nums) {
+
+    public int removeDuplicates(int[] nums) {
 
         if (nums.length == 0) {
             return 0;
         }
-        int t = nums[0];
-        int len = 1;
-        int point = 1;
+        int pointer = 1, last = nums[0];
         for (int i = 1; i < nums.length; i++) {
-            if (nums[i] == t) {
-                continue;
-            } else {
-                nums[point] = nums[i];
-                point++;
-                t = nums[i];
+            if (nums[i] > last) {
+                nums[pointer++] = nums[i];
             }
+            last = nums[i];
         }
-        return point;
+
+        return pointer;
     }
 }

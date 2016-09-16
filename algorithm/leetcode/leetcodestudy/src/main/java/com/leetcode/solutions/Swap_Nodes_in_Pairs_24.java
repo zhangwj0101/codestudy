@@ -5,23 +5,23 @@
  */
 package com.leetcode.solutions;
 
-import static com.leetcode.solutions.Remove_Nth_Node_From_End_of_List_19.print;
+
+import org.junit.Test;
 
 /**
- *
  * @author zhangwj
  */
 public class Swap_Nodes_in_Pairs_24 {
 
-    public static void main(String[] args) {
+    @Test
+    public void main() {
         ListNode s1 = new ListNode(1);
         ListNode s2 = new ListNode(2);
         s1.next = s2;
-        ListNode s = swapPairs(s1);
-        print(s);
+        ListNode s = swapPairs1(s1);
     }
 
-    public static ListNode swapPairs(ListNode head) {
+    public ListNode swapPairs(ListNode head) {
         ListNode s1 = new ListNode(0);
         ListNode s2 = new ListNode(0);
         ListNode result = new ListNode(0);
@@ -54,4 +54,50 @@ public class Swap_Nodes_in_Pairs_24 {
         result.next = (ss1 == null) ? ss2 : ss1;
         return rres.next;
     }
+
+    public ListNode swapPairs1(ListNode head) {
+        return reverse2Group(head, 2);
+    }
+
+    public ListNode reverse2Group(ListNode head, int k) {
+
+        if (k < 2) {
+            return head;
+        }
+        ListNode cur = head;
+        ListNode pre = null, start = null;
+        ListNode next = null;
+        int count = 1;
+        while (cur != null) {
+            next = cur.next;
+            if (count == k) {
+                start = pre == null ? head : pre.next;
+                head = pre == null ? cur : head;
+                reverse(pre, start, cur, next);
+                pre = start;
+                count = 0;
+            }
+            count++;
+            cur = next;
+        }
+        return head;
+    }
+
+    public void reverse(ListNode left, ListNode start, ListNode end, ListNode right) {
+
+        ListNode next = null, pre = null, st = start;
+        while (start != right) {
+            next = start.next;
+            start.next = pre;
+            pre = start;
+            start = next;
+        }
+        if (left != null) {
+            left.next = pre;
+        }
+        st.next = right;
+
+
+    }
+
 }

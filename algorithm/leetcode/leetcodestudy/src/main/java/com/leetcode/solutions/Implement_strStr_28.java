@@ -16,80 +16,39 @@ public class Implement_strStr_28 {
 
     @Test
     public void test() {
-
-        System.out.println(strStr1("a", ""));
+        System.out.println(strStr("a", ""));
     }
 
     public int strStr(String haystack, String needle) {
-
-        if (haystack.length() < needle.length()) {
-            return -1;
-        }
-        int point1 = 0;
-        int subpoint = 0;
-        char[] s1 = haystack.toCharArray();
-        char[] s2 = needle.toCharArray();
-        while (point1 < s1.length && subpoint < s2.length) {
-            if (s1[point1] == s2[subpoint]) {
-                point1++;
-                subpoint++;
-            } else {
-                if (subpoint == 0) {
-                    point1++;
-                } else {
-                    point1 = point1 - subpoint + 1;
-                }
-                subpoint = 0;
-            }
-        }
-        if (subpoint == s2.length) {
-            return point1 - subpoint;
-        }
-
-        return -1;
-
-    }
-
-    public int strStr1(String haystack, String needle) {
-
-        if (haystack.equals(needle) || needle.length() == 0) {
+        if (haystack.equals(needle) || needle.length() < 1) {
             return 0;
         }
-        if (haystack.length() < needle.length()) {
-            return -1;
-        }
-
+        int i = 0, j = 0;
         int[] next = getNext(needle);
-        System.out.println(Arrays.toString(next));
-        int j = 0, i = 0;
         while (i < haystack.length() && j < needle.length()) {
-            if (haystack.charAt(i) == needle.charAt(j)) {
+            if (j == -1 || haystack.charAt(i) == needle.charAt(j)) {
                 i++;
                 j++;
             } else {
-                if (next[j] == -1) {
-                    i++;
-                    j = 0;
-                } else {
-                    j = next[j];
-                }
-            }
-            if (j == needle.length()) {
-                return i - j;
+                j = next[j];
             }
         }
-        return -1;
+        return j == needle.length() ? i - j : -1;
     }
 
-    public int[] getNext(String needle) {
+    private int[] getNext(String needle) {
         int[] next = new int[needle.length()];
-        int k = -1, i = 0;
         next[0] = -1;
-        while (i < needle.length() - 1) {
-            if (k == -1 || needle.charAt(i) == needle.charAt(k)) {
-                i++;
+        int k = -1, j = 0;
+        while (j < needle.length() - 1) {
+            if (k == -1 || needle.charAt(k) == needle.charAt(j)) {
                 k++;
-                next[i] = k;
+                j++;
+                if (needle.charAt(k) == needle.charAt(j)) {
+                    next[j] = next[k];
+                } else {
+                    next[j] = k;
+                }
             } else {
                 k = next[k];
             }

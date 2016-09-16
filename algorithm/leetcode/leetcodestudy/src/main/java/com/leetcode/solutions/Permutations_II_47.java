@@ -1,9 +1,6 @@
 package com.leetcode.solutions;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 /**
  * Created by zhangwj on 16/2/24.
@@ -46,4 +43,5 @@ public class Permutations_II_47 {
         }
         return results;
     }
+
 }

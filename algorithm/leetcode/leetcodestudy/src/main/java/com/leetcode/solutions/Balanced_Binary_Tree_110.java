@@ -20,7 +20,6 @@ public class Balanced_Binary_Tree_110 {
             return -1;
         }
         return Math.max(rdep + 1, ldep + 1);
-
     }
 
     public boolean isBalanced(TreeNode root) {

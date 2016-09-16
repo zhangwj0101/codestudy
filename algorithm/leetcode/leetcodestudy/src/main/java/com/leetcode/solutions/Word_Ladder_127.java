@@ -41,7 +41,6 @@ public class Word_Ladder_127 {
                     for (char c = 'a'; c <= 'z'; c++) {
                         sb.setCharAt(j, c);
                         String tmp = sb.toString();
-
                         if (tmp.equals(end)) {
                             return level;
                         }

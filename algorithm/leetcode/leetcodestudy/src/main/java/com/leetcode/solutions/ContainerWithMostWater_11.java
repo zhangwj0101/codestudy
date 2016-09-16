@@ -5,6 +5,8 @@
  */
 package com.leetcode.solutions;
 
+import org.junit.Test;
+
 import java.util.Arrays;
 import java.util.Comparator;
 
@@ -13,7 +15,8 @@ import java.util.Comparator;
  */
 public class ContainerWithMostWater_11 {
 
-    public static void main(String[] args) {
+    @Test
+    public void test() {
         int[] a = {1, 2, 3};
         System.out.println(maxArea(a));
     }
@@ -60,6 +63,7 @@ public class ContainerWithMostWater_11 {
         }
         return area;
     }
+
 
 }
 

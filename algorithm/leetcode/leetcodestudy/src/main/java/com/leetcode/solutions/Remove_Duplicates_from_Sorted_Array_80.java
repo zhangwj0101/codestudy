@@ -5,28 +5,20 @@ package com.leetcode.solutions;
  */
 public class Remove_Duplicates_from_Sorted_Array_80 {
     public int removeDuplicates(int[] nums) {
-
-        if (nums.length <= 2) {
-            return nums.length;
-        }
-        int i = 2;
-        int pointer = 0;
-        while (i < nums.length && nums[i] != nums[i - 2]) {
-            i++;
-        }
-        if (i == nums.length) {
-            return nums.length;
-        }
-        pointer = i;
-        i++;
-        while (i < nums.length) {
-            if (nums[i] != nums[pointer - 2]) {
-                nums[pointer++] = nums[i];
-                nums[pointer] = 0;
+        if (nums == null)
+            return 0;
+        int cur = 0;
+        int i, j;
+        for (i = 0; i < nums.length; ) {
+            int now = nums[i];
+            for (j = i; j < nums.length; j++) {
+                if (nums[j] != now)
+                    break;
+                if (j - i < 2)
+                    nums[cur++] = now;
             }
-            i++;
+            i = j;
         }
-
-        return pointer;
+        return cur;
     }
 }

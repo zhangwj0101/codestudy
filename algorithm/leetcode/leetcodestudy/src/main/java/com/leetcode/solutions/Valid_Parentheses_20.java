@@ -5,6 +5,8 @@
  */
 package com.leetcode.solutions;
 
+import org.junit.Test;
+
 import java.util.Stack;
 
 /**
@@ -12,41 +14,36 @@ import java.util.Stack;
  */
 public class Valid_Parentheses_20 {
 
-    public static void main(String[] args) {
-        System.out.println(isValid("(])}[}[}[]][}}[}{})][[(]({])])}}(])){)((){"));
+
+    @Test
+    public void test() {
+        System.out.println(isValid("()"));
     }
 
+
     public static boolean isValid(String s) {
-        if (s.length() % 2 != 0) {
+
+        if (s == null) {
             return false;
         }
-        Stack<Character> stack = new Stack<>();
-        int left = '0';
+        Stack<Character> stacks = new Stack<>();
         for (int i = 0; i < s.length(); i++) {
-            left = '0';
-            switch (s.charAt(i)) {
-                case ')':
-                    left = '(';
-                    break;
-                case ']':
-                    left = '[';
-                    break;
-                case '}':
-                    left = '{';
-                    break;
-
-            }
-            if (stack.size() == 0 || left == '0') {
-                stack.push(s.charAt(i));
-                continue;
-            }
-            Character peek = stack.peek();
-            if (peek == left) {
-                stack.pop();
+            char ch = s.charAt(i);
+            if (ch == '(' || ch == '[' || ch == '{') {
+                stacks.push(s.charAt(i));
             } else {
-                return false;
+                if (stacks.empty()) {
+                    return false;
+                }
+                Character pop = stacks.pop();
+                boolean flag = (ch == ')' && pop == '(')
+                        || (ch == ']' && pop == '[')
+                        || (ch == '}' && pop == '{');
+                if (!flag) {
+                    return false;
+                }
             }
         }
-        return stack.size() == 0;
+        return stacks.isEmpty();
     }
 }

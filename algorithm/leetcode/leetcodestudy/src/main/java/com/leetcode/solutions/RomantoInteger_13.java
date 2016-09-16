@@ -5,6 +5,8 @@
  */
 package com.leetcode.solutions;
 
+import org.junit.Test;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -13,11 +15,12 @@ import java.util.Map;
  */
 public class RomantoInteger_13 {
 
-    public static void main(String[] args) {
+    @Test
+    public void test() {
         System.out.println(romanToInt("MMMCMXCIX"));
     }
 
-    public static int romanToInt(String s) {
+    public int romanToInt(String s) {
 
         int sum = 0;
         int last = 0;
@@ -54,6 +57,6 @@ public class RomantoInteger_13 {
             last = value;
         }
         return sum;
-
     }
+
 }

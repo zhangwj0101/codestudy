@@ -18,10 +18,10 @@ import java.util.Set;
 public class Combination_Sum_39 {
 
     public static void main(String[] args) {
-        int[] c = {1, 2};
-        int target = 3;
+        int[] c = {2, 3, 6, 7};
+        int target = 7;
         List<List<Integer>> res = combinationSum(c, target);
-        System.out.println(res.size());
+        System.out.println(res);
     }
 
     public static void get(int[] candidates,
@@ -29,11 +29,7 @@ public class Combination_Sum_39 {
                            List<Integer> tempResult, List<List<Integer>> results) {
 
         if (target == 0) {
-            List<Integer> de = new ArrayList<>();
-            for (Integer temp : tempResult) {
-                de.add(temp);
-            }
-            results.add(de);
+            results.add(new ArrayList<Integer>(tempResult));
             return;
         }
         for (int i = index; i < candidates.length && candidates[i] <= target; i++) {
@@ -52,4 +48,5 @@ public class Combination_Sum_39 {
         get(candidates, 0, target, tempResults, results);
         return results;
     }
+
 }

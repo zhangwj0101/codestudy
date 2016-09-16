@@ -5,38 +5,41 @@
  */
 package com.leetcode.solutions;
 
+import org.junit.Test;
+
 /**
- *
  * @author zhangwj
  */
 public class LongestCommonPrefix_14 {
 
-    public static void main(String[] args) {
+    @Test
+    public void test() {
         String[] s = {"'", "s", "dsf"};
         System.out.println(longestCommonPrefix(s));
     }
 
-    public static String longestCommonPrefix(String[] strs) {
-        if (strs.length == 0) {
+    public String longestCommonPrefix(String[] strs) {
+        if (strs == null || strs.length < 1) {
             return "";
         }
-        int pointer = 0;
-        String t = strs[0];
-
+        int i = 0;
         boolean flag = true;
+        String te = strs[0];
+
         while (flag) {
-            for (String str : strs) {
-                if (str.length() == 0
-                    || pointer >= str.length()
-                    || t.charAt(pointer) != str.charAt(pointer)) {
+            for (String t : strs) {
+                if (t == null
+                        || t.length() <= i
+                        || t.charAt(i) != te.charAt(i)) {
                     flag = false;
                     break;
                 }
             }
             if (flag) {
-                pointer++;
+                i++;
             }
         }
-        return strs[0].substring(0, pointer);
+        return te.substring(0, i);
     }
+
 }

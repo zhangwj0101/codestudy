@@ -17,7 +17,6 @@ public class Rotate_Image_48 {
             }
             System.out.println("");
         }
-
     }
 
     public static void rotate(int[][] matrix) {
@@ -37,4 +36,5 @@ public class Rotate_Image_48 {
             }
         }
     }
+
 }

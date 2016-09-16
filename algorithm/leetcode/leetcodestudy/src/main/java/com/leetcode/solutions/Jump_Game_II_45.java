@@ -9,8 +9,8 @@ public class Jump_Game_II_45 {
 
     @Test
     public void main() {
-        int[] nums = {25000, 24999, 24998, 24997};
-        System.out.println(jump(nums));
+        int[] nums = {2, 3, 1, 1, 4};
+        System.out.println(jump1(nums));
     }
 
     public int jump1(int[] nums) {
@@ -61,5 +61,6 @@ public class Jump_Game_II_45 {
         }
         return temps[0];
     }
+
 
 }

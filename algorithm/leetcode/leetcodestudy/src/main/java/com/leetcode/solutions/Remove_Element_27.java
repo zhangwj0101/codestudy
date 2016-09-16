@@ -5,14 +5,21 @@
  */
 package com.leetcode.solutions;
 
+import org.junit.Test;
+
+import java.util.Arrays;
+
 /**
- *
  * @author zhangwj
  */
 public class Remove_Element_27 {
 
-    public static void main(String[] args) {
-
+    @Test
+    public void main() {
+        int[] nums = {3, 2, 2, 3};
+        int val = 3;
+        System.out.println(removeElement(nums, val));
+        System.out.println(Arrays.toString(nums));
     }
 
     public static int removeElement(int[] nums, int val) {
@@ -26,4 +33,5 @@ public class Remove_Element_27 {
         }
         return point;
     }
+
 }

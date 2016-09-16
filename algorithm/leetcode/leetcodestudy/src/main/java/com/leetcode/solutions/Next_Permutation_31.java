@@ -8,7 +8,6 @@ package com.leetcode.solutions;
 import java.util.Arrays;
 
 /**
- *
  * @author zhangwj
  */
 public class Next_Permutation_31 {
@@ -26,50 +25,25 @@ public class Next_Permutation_31 {
         if (nums.length < 2) {
             return;
         }
-        int i = 0;
-        for (i = nums.length - 1; i > 0 && nums[i] < nums[i - 1]; i--);
-        if (i == 0) {
+        int i = nums.length - 2, j = nums.length - 1;
+        while (i >= 0 && nums[i] >= nums[i + 1]) {
+            i--;
+        }
+        if (i == -1) {
             Arrays.sort(nums);
             return;
         }
-
-        int k = i + 1;
-        for (; k < nums.length && nums[k] > nums[i - 1]; k++);
-        k--;
-        int temp = nums[i - 1];
-        nums[i - 1] = nums[k];
-        nums[k] = temp;
-        Arrays.sort(nums, i, nums.length);
-
+        while (j > i && nums[j] <= nums[i]) {
+            j--;
+        }
+        swap(nums, i, j);
+        Arrays.sort(nums, i + 1, nums.length);
     }
 
-    public static void nextPermutation1(int[] nums) {
-
-        if (nums.length < 2) {
-            return;
-        }
-        int i = 0;
-        for (i = nums.length - 1; i > 0 && nums[i] <= nums[i - 1]; i--);
-        if (i == 0) {
-            Arrays.sort(nums);
-            return;
-        }
-        int k = i + 1;
-        for (; k < nums.length && nums[k] >= nums[i]; k++);
-        k++;
-        int temp = nums[nums.length - 1];
-        int j = 0;
-        boolean flag = temp > nums[i - 1];
-        if (flag) {
-            for (j = nums.length - 1; j >= i; j--) {
-                nums[j] = nums[j - 1];
-            }
-        } else {
-            temp = nums[i - 1];
-            for (j = i - 1; j < nums.length - 1; j++) {
-                nums[j] = nums[j + 1];
-            }
-        }
-        nums[j] = temp;
+    public static void swap(int[] nums, int i, int j) {
+        int te = nums[i];
+        nums[i] = nums[j];
+        nums[j] = te;
     }
+
 }

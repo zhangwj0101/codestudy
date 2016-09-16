@@ -5,14 +5,16 @@
  */
 package com.leetcode.solutions;
 
+import java.util.Arrays;
+
 /**
  * @author zhangwj
  */
 public class Trapping_Rain_Water_42 {
 
     public static void main(String[] args) {
-        int[] heights = {0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1};
-        System.out.println(trap1(heights));
+        int[] heights = {4, 2, 3};
+        System.out.println(trap2(heights));
     }
 
     public static int trap(int[] height) {
@@ -58,6 +60,32 @@ public class Trapping_Rain_Water_42 {
                 res += right - height[i];
             }
         }
+        return res;
+    }
+
+    public static int trap2(int[] height) {
+
+        int res = 0;
+        int tempMax = -1;
+        int[] rightMax = new int[height.length];
+        Arrays.fill(rightMax, -1);
+        for (int i = height.length - 1; i >= 0; i--) {
+            if (height[i] <= tempMax) {
+                rightMax[i] = tempMax;
+            } else {
+                rightMax[i] = tempMax;
+                tempMax = height[i];
+            }
+        }
+        tempMax = 0;
+        for (int i = 0; i < height.length - 1; i++) {
+            if (tempMax > height[i]) {
+                res += tempMax - height[i];
+            } else {
+                tempMax = rightMax[i] < height[i] ? rightMax[i] : height[i];
+            }
+        }
+
         return res;
     }
 }

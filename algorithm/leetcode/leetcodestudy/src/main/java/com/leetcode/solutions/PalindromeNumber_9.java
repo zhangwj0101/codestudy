@@ -5,17 +5,19 @@
  */
 package com.leetcode.solutions;
 
+import org.junit.Test;
+
 /**
- *
  * @author zhangwj
  */
 public class PalindromeNumber_9 {
 
-    public static void main(String[] args) {
+    @Test
+    public void test() {
         System.out.println(isPalindrome(12321));
     }
 
-    public static boolean isPalindrome(int x) {
+    public boolean isPalindrome(int x) {
 
         char[] temp = String.valueOf(x).toCharArray();
         for (int i = 0, end = temp.length - 1; i < end; i++, end--) {
@@ -26,7 +28,7 @@ public class PalindromeNumber_9 {
         return true;
     }
 
-    public static boolean isPalindrome1(int x) {
+    public boolean isPalindrome1(int x) {
         int temp = x;
         int result = 0;
         while (temp > 0) {

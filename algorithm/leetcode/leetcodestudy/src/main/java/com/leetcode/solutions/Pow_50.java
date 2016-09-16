@@ -1,11 +1,22 @@
 package com.leetcode.solutions;
 
+import org.junit.Test;
+
+import java.util.Arrays;
+
 /**
  * Created by zhangwj on 16/2/25.
  */
 public class Pow_50 {
-    public static void main(String[] args) {
-        System.out.println(myPow(0.01, -2147483647));
+
+    @Test
+    public void main() {
+
+        int[] nums = {49, 38, 65};
+        int[] temp = new int[nums.length];
+//        System.out.println(myPow(2, -2147483648));
+        mergeSort(nums, temp, 0, nums.length - 1);
+        System.out.println(Arrays.toString(temp));
     }
 
     public static double myPow(double x, int n) {
@@ -27,4 +38,34 @@ public class Pow_50 {
         else return 1 / res;
     }
 
+    public void mergeSort(int[] nums, int[] nums1, int left, int right) {
+        if (left < right) {
+            int mid = (left + right) / 2;
+            mergeSort(nums, nums1, left, mid);
+            mergeSort(nums, nums1, mid + 1, right);
+            merge(nums, nums1, left, mid, right);
+        }
+    }
+
+    private void merge(int[] nums, int[] nums1, int left, int mid, int right) {
+        int j = mid + 1, tk = left, k = left;
+
+        for (k = left; left <= mid && j <= right; k++) {
+            if (nums[left] > nums[j]) {
+                nums1[k] = nums[j++];
+            } else {
+                nums1[k] = nums[left++];
+            }
+        }
+        while (left <= mid) {
+            nums1[k++] = nums[left++];
+        }
+        while (j <= right) {
+            nums1[k++] = nums[j++];
+        }
+        while (tk <= right) {
+            nums[tk] = nums1[tk];
+            tk++;
+        }
+    }
 }

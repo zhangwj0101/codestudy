@@ -5,38 +5,40 @@
  */
 package com.leetcode.solutions;
 
+import org.junit.Test;
+
 /**
  * @author zhangwj
  */
 public class Count_and_Say_38 {
 
-    public static void main(String[] args) {
-        System.out.println(countAndSay(5));
+    @Test
+    public void main() {
+        System.out.println(countAndSay(7));
     }
 
     public static String countAndSay(int n) {
         if (n < 1) {
             return null;
         }
-        String[] results = new String[n];
-        StringBuilder sb = new StringBuilder(1024);
-        results[0] = new String("1");
-
-        for (int i = 1; i < n; i++) {
-            char[] temp = results[i - 1].toCharArray();
-            sb.delete(0, sb.length());
-            for (int j = 0; j < temp.length; ) {
-                char t = temp[j];
-                int len = 1;
-                j++;
-                while (j < temp.length && temp[j] == t) {
-                    j++;
-                    len++;
+        String[] buffer = new String[n + 1];
+        buffer[1] = "1";
+        StringBuilder sb = new StringBuilder();
+        for (int i = 2; i <= n; i++) {
+            String temp = buffer[i - 1];
+            int te = 1, j = 1;
+            for (; j < temp.length(); j++) {
+                if (temp.charAt(j) == temp.charAt(j - 1)) {
+                    te++;
+                } else {
+                    sb.append(te).append(temp.charAt(j - 1));
+                    te = 1;
                 }
-                sb.append(len).append(t);
             }
-            results[i] = sb.toString();
+            sb.append(te).append(temp.charAt(j - 1));
+            buffer[i] = sb.toString();
+            sb.delete(0, sb.length());
         }
-        return results[n - 1];
+        return buffer[n];
     }
 }

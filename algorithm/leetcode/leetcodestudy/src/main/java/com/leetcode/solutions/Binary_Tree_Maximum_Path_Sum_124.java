@@ -25,7 +25,6 @@ public class Binary_Tree_Maximum_Path_Sum_124 {
         ret.maxS = maxS;
         ret.max = Math.max(max, cross);
         return ret;
-
     }
 
     class TNode {

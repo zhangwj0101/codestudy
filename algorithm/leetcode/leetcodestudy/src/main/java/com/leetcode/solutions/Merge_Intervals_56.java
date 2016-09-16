@@ -51,7 +51,12 @@ public class Merge_Intervals_56 {
         if (intervals == null || intervals.size() <= 1) {
             return intervals;
         }
-        Collections.sort(intervals, new IntervalComparator());
+        Collections.sort(intervals, new Comparator<Interval>() {
+            @Override
+            public int compare(Interval o1, Interval o2) {
+                return o1.start - o2.start;
+            }
+        });
         ArrayList<Interval> result = new ArrayList<Interval>();
         Interval last = intervals.get(0);
         for (int i = 1; i < intervals.size(); i++) {
