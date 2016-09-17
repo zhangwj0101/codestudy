@@ -58,7 +58,7 @@ public class Valid_Sudoku_36 {
         }
 
         return isValid(board, index + 1);
-    }
+}
 
     public static boolean check(char[][] board, int x, int y) {
 

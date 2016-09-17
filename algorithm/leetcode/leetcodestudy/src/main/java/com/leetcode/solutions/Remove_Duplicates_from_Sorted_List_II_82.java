@@ -39,9 +39,7 @@ public class Remove_Duplicates_from_Sorted_List_II_82 {
         if (flag) {
             cur = pre;
             cur.next = null;
-
         }
-
         return result.next;
     }
 

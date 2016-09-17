@@ -24,7 +24,6 @@ public class Largest_Rectangle_in_Histogram_84 {
         }
 
         return max;
-
     }
 
     public int largestRectangleArea1(int[] h) {

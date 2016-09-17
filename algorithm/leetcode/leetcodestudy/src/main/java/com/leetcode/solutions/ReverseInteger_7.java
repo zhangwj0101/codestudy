@@ -30,7 +30,6 @@ public class ReverseInteger_7 {
         if (flag && -result < Integer.MIN_VALUE) {
             return 0;
         }
-
         return (int) (flag ? -result : result);
     }
 }
